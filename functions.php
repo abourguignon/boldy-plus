@@ -23,8 +23,8 @@ function primarymenu() {
 ?>
     <div id="mainMenu" class="ddsmoothmenu">
         <ul>
+            <?php wp_list_categories('hide_empty=1&title_li='); ?>
             <?php wp_list_pages('title_li='); ?>
-            <?php wp_list_categories('hide_empty=1&exclude=1&title_li='); ?>
         </ul>
     </div>
 <?php 
