@@ -30,6 +30,57 @@ function primarymenu() {
 <?php 
 }
 
+
+/*******************************
+ PAGES SUPPORT
+********************************/
+
+/**
+ * Fetch or display a list of pages public AND private as a dropdown 
+ * (select list).
+ */
+function boldy_dropdown_pages($args = '') {
+    $defaults = array(
+        'depth' => 0, 'child_of' => 0,
+        'selected' => 0, 'echo' => 1,
+        'name' => 'page_id', 'id' => '',
+        'show_option_none' => '', 'show_option_no_change' => '',
+        'option_none_value' => ''
+    );
+    
+    $r = wp_parse_args( $args, $defaults );
+    extract( $r, EXTR_SKIP );
+
+    // Super workaround to display private pages trololol
+    $pages_publish = get_pages(array_merge($r, array('post_status' => 'publish')));
+    $pages_private = get_pages(array_merge($r, array('post_status' => 'private')));
+    $pages = array_merge($pages_publish, $pages_private);
+    
+    $output = '';
+    $name = esc_attr($name);
+    // Back-compat with old system where both id and name were based on $name argument
+    if ( empty($id) )
+        $id = $name;
+
+    if ( ! empty($pages) ) {
+        $output = "<select name=\"$name\" id=\"$id\">\n";
+        if ( $show_option_no_change )
+            $output .= "\t<option value=\"-1\">$show_option_no_change</option>";
+        if ( $show_option_none )
+            $output .= "\t<option value=\"" . esc_attr($option_none_value) . "\">$show_option_none</option>\n";
+        $output .= walk_page_dropdown_tree($pages, $depth, $r);
+        $output .= "</select>\n";
+    }
+
+    $output = apply_filters('wp_dropdown_pages', $output);
+
+    if ( $echo )
+        echo $output;
+
+    return $output;
+}
+
+
 /*******************************
  THUMBNAIL SUPPORT
 ********************************/
@@ -319,7 +370,7 @@ function boldy_settings()
     <h2>Boldy Options Panel</h2>
     
 <form method="post" action="">
-
+    
     <fieldset style="border:1px solid #ddd; padding-bottom:20px; margin-top:20px;">
     <legend style="margin-left:5px; padding:0 5px;color:#2481C6; text-transform:uppercase;"><strong>General Settings</strong></legend>
     <table class="form-table">
