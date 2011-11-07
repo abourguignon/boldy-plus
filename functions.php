@@ -526,7 +526,7 @@ function boldy_settings()
             </th>
         </tr>
         <tr valign="top">
-            <th scope="row"><label for="home_box1">Home Box1 Page</label></th>
+            <th scope="row"><label for="home_box1">Home box1 page</label></th>
             <td>
                 <?php wp_dropdown_pages("name=home_box1&show_option_none=".__('- Select -')."&selected=" .get_option('boldy_home_box1')); ?>
             </td>
