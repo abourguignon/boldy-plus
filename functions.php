@@ -583,4 +583,3 @@ function strhex($string) {
   $hexstr = unpack('H*', $string);
   return array_shift($hexstr);
 }
-?>
