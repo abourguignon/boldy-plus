@@ -366,47 +366,88 @@ function boldy_theme_page ()
 function boldy_settings()
 {
 ?>
+<style type="text/css">
+    h4 {
+        margin: 0;
+    }
+    
+    legend {
+        margin-left: 5px;
+        padding: 0 5px;
+    }
+    
+    p.notice {
+        color: #666;
+    }
+</style>
+
 <div class="wrap">
     <h2>Boldy Options Panel</h2>
     
 <form method="post" action="">
     
     <fieldset style="border:1px solid #ddd; padding-bottom:20px; margin-top:20px;">
-    <legend style="margin-left:5px; padding:0 5px;color:#2481C6; text-transform:uppercase;"><strong>General Settings</strong></legend>
+    <legend><h3>Boldy documentation</h3></legend>
+    <img style="margin: 10px; float: left;" src="<?php echo bloginfo('template_directory');?>/images/logo_boldy.png" alt="Boldy logo" />
+    <p>
+        This is <b>Boldy+</b>, an enhanced version of the Boldy theme, by <a href="http://www.site5.com/">Site5</a>.<br />
+        You'll find the original documentation about Boldy's usage and configuration on the Site5 website: 
+        <a href="http://wordpress.site5.net/boldy/doc/">http://wordpress.site5.net/boldy/doc/</a>, and the 
+        Boldy+ documentation on the Google code project page: 
+        <a href="http://code.google.com/p/boldy-plus/">http://code.google.com/p/boldy-plus/</a>.
+    </p>
+    </fieldset>
+    
+    <!-- General settings -->
+    <fieldset style="border:1px solid #ddd; padding-bottom:20px; margin-top:20px;">
+    <legend><h3>General Settings</h3></legend>
     <table class="form-table">
-        <!-- General settings -->
-        
         <tr valign="top">
-            <th scope="row"><label for="logo_img">Change logo (full path to logo image)</label></th>
+            <th scope="row"><label for="logo_img">Theme logo</label></th>
             <td>
-                <input name="logo_img" type="text" id="logo_img" value="<?php echo get_option('boldy_logo_img'); ?>" class="regular-text" /><br />
-                <em>current logo:</em> <br /> <img src="<?php echo get_option('boldy_logo_img'); ?>" alt="<?php echo get_option('boldy_logo_alt'); ?>" />
+                <input name="logo_img" type="text" id="logo_img" value="<?php echo get_option('boldy_logo_img'); ?>" class="regular-text" />
+                <p class="notice">
+                    Provide full path to your logo.
+                </p>
+                <p class="notice">
+                    Current logo: 
+                    <?php if (get_option('boldy_logo_img') != '') : ?>
+                    <br />
+                    <br />
+                    <img src="<?php echo get_option('boldy_logo_img'); ?>" alt="<?php echo get_option('boldy_logo_alt'); ?>" />
+                    <?php else : ?>
+                    no logo set.
+                    <?php endif; ?>
+                </p>
             </td>
         </tr>
         <tr valign="top">
-            <th scope="row"><label for="logo_alt">Logo ALT Text</label></th>
+            <th scope="row"><label for="logo_alt">Theme logo alternative text</label></th>
             <td>
                 <input name="logo_alt" type="text" id="logo_alt" value="<?php echo get_option('boldy_logo_alt'); ?>" class="regular-text" />
             </td>
         </tr>
         
          <tr valign="top">
-            <th scope="row"><label for="cufon">Cufon Font Replacement</label></th>
+            <th scope="row"><label for="cufon">Cufon font replacement</label></th>
             <td>
                 <select name="cufon" id="cufon">
                     <option value="yes" <?php if(get_option('boldy_cufon') == 'yes'){?>selected="selected"<?php }?>>Yes</option>        
                     <option value="no" <?php if(get_option('boldy_cufon') == 'no'){?>selected="selected"<?php }?>>No</option>
-                </select>
+                </select><br />
+                <p class="notice">
+                    Use <em>cufon-yui.js</em> to introduce a nice custom font in the theme.
+                </p>
             </td>
         </tr>
         <tr valign="top">
-            <th scope="row"><label for="b">Choose Blog Category</label></th>
+            <th scope="row"><label for="b">Choose blog category</label></th>
             <td>
                 <?php wp_dropdown_categories("name=blog&hide_empty=0&show_option_none=".__('- Select -')."&selected=" .get_option('boldy_blog')); ?>
             </td>
         </tr>
          <tr valign="top">
-            <th scope="row"><label for="portfolio">Choose Portfolio Category</label></th>
+            <th scope="row"><label for="portfolio">Choose portfolio category</label></th>
             <td>
                 <?php wp_dropdown_categories("name=portfolio&hide_empty=0&show_option_none=".__('- Select -')."&selected=" .get_option('boldy_portfolio')); ?>
             </td>
@@ -417,19 +458,20 @@ function boldy_settings()
     <p class="submit">
         <input type="submit" name="Submit" class="button-primary" value="Save Changes" />
         <input type="hidden" name="boldy_settings" value="save" style="display:none;" />
-        </p>
+    </p>
     
+    <!-- Social settings -->
     <fieldset style="border:1px solid #ddd; padding-bottom:20px; margin-top:20px;">
-    <legend style="margin-left:5px; padding:0 5px; color:#2481C6;text-transform:uppercase;"><strong>Social Links</strong></legend>
-        <table class="form-table">
+    <legend><h3>Social links settings</h3></legend>
+    <table class="form-table">
         <tr valign="top">
-            <th scope="row"><label for="twitter_user">Twitter Username</label></th>
+            <th scope="row"><label for="twitter_user">Twitter username</label></th>
             <td>
                 <input name="twitter_user" type="text" id="twitter_user" value="<?php echo get_option('boldy_twitter_user'); ?>" class="regular-text" />
             </td>
         </tr>
         <tr valign="top">
-            <th scope="row"><label for="latest_tweet">Display Latest Tweet</label></th>
+            <th scope="row"><label for="latest_tweet">Display latest tweet</label></th>
             <td>
                 <select name="latest_tweet" id="latest_tweet">        
                     <option value="yes" <?php if(get_option('boldy_latest_tweet') == 'yes'){?>selected="selected"<?php }?>>Yes</option>
@@ -454,26 +496,34 @@ function boldy_settings()
         <p class="submit">
         <input type="submit" name="Submit" class="button-primary" value="Save Changes" />
         <input type="hidden" name="boldy_settings" value="save" style="display:none;" />
-        </p>
-        
-        <fieldset style="border:1px solid #ddd; padding-bottom:20px; margin-top:20px;">
-    <legend style="margin-left:5px; padding:0 5px;color:#2481C6; text-transform:uppercase;"><strong>Homepage Settings</strong></legend>
+    </p>
+    
+    <!-- Homepage settings -->
+    <fieldset style="border:1px solid #ddd; padding-bottom:20px; margin-top:20px;">
+    <legend><h3>Homepage settings</h3></legend>
     <table class="form-table">
-        <!-- Homepage Boxes 1 -->
         <tr>
-            <th colspan="2"><strong>Homepage Slider </strong></th>
+            <th colspan="2"><h4>Homepage slider</h4></th>
         </tr>
         <tr valign="top">
-            <th scope="row"><label for="slider">Homepage Slider Images Page</label></th>
+            <th scope="row"><label for="slider">Homepage slider images page</label></th>
             <td>
-                <?php wp_dropdown_pages("name=slider&show_option_none=".__('- Select -')."&selected=" .get_option('boldy_slider')); ?>
+                <?php boldy_dropdown_pages(array('name' => 'slider', 'show_option_none' => __('- Select -'), 'selected' => get_option('boldy_slider'))); ?>
+                <p class="notice">
+                    If you don't want this special page to be published within the others, in your main menu, set its visibility to "private".<br />
+                    The pictures must be 960 x 370px.
+                </p>
             </td>
         </tr>
         <tr>
-            <th colspan="2"><strong>Homepage Boxes </strong></th>
+            <th colspan="2"><h4>Homepage boxes</h4></th>
         </tr>
         <tr>
-            <th colspan="2"> They should be ALL selected ! Other way the row wont appear at all.</th>
+            <th colspan="2">
+                They should be ALL selected ! Otherwise the row won't appear at all.<br />
+                The text displayed will be page's excerpt.  If you don't know how to editate a page's excerpt, use a WP plugin like <em>Page Excerpt Plugin</em>.<br />
+                If you want to put a picture in the box (between the title and the text), just set a post thumbnail (ideal dimensions: 274 x 101).
+            </th>
         </tr>
         <tr valign="top">
             <th scope="row"><label for="home_box1">Home Box1 Page</label></th>
@@ -482,111 +532,118 @@ function boldy_settings()
             </td>
         </tr>
         <tr valign="top">
-            <th scope="row"><label for="home_box1_link">Home Box1 "read more" link</label></th>
+            <th scope="row"><label for="home_box1_link">Home box1 "read more" link</label></th>
             <td>
                 <input name="home_box1_link" type="text" id="home_box1_link" value="<?php echo get_option('boldy_home_box1_link'); ?>" class="regular-text" />
             </td>
         </tr>
         <tr valign="top">
-            <th scope="row"><label for="home_box2">Homepage Box2 Page</label></th>
+            <th scope="row"><label for="home_box2">Homepage box2 page</label></th>
             <td>
                 <?php wp_dropdown_pages("name=home_box2&show_option_none=".__('- Select -')."&selected=" .get_option('boldy_home_box2')); ?>
             </td>
         </tr>
         <tr valign="top">
-            <th scope="row"><label for="home_box2_link">Home Box2 "read more" link</label></th>
+            <th scope="row"><label for="home_box2_link">Home box2 "read more" link</label></th>
             <td>
                 <input name="home_box2_link" type="text" id="home_box2_link" value="<?php echo get_option('boldy_home_box2_link'); ?>" class="regular-text" />
             </td>
         </tr>
         <tr valign="top">
-            <th scope="row"><label for="home_box3">Home Box3 Page</label></th>
+            <th scope="row"><label for="home_box3">Home box3 page</label></th>
             <td>
                 <?php wp_dropdown_pages("name=home_box3&show_option_none=".__('- Select -')."&selected=" .get_option('boldy_home_box3')); ?>
             </td>
         </tr>    
         <tr valign="top">
-            <th scope="row"><label for="home_box3_link">Home Box3 "read more" link</label></th>
+            <th scope="row"><label for="home_box3_link">Home box3 "read more" link</label></th>
             <td>
                 <input name="home_box3_link" type="text" id="home_box3_link" value="<?php echo get_option('boldy_home_box3_link'); ?>" class="regular-text" />
             </td>
         </tr>
         <tr>
-            <th colspan="2"><strong>Homepage Blurb (request quote section) </strong></th>
+            <th colspan="2"><h4>Homepage blurb (request quote section)</h4></th>
         </tr>
          <tr>
-            <th><label for="blurb_enable">Display Homepage Blurb</label></th>
+            <th><label for="blurb_enable">Display homepage blurb</label></th>
             <td>
                 <select name="blurb_enable" id="blurb_enable"> 
                     <option value="yes" <?php if(get_option('boldy_blurb_enable') == 'yes'){?>selected="selected"<?php }?>>Yes</option>        
                     <option value="no" <?php if(get_option('boldy_blurb_enable') == 'no'){?>selected="selected"<?php }?>>No</option>
-                </select><br />
-                <em>If "Yes" is selected and text field is empty, the blurb wont appear</em>
+                </select>
+                <p class="notice">
+                    If "Yes" is selected and text field is empty, the blurb wont appear
+                </p>
             </td>
         </tr>
         <tr valign="top">
-            <th scope="row"><label for="blurb_text">Blurb Text</label></th>
+            <th scope="row"><label for="blurb_text">Blurb text</label></th>
             <td>
                 <textarea name="blurb_text" id="blurb_text" rows="3" cols="70" style="font-size:11px;"><?php echo stripslashes(get_option('boldy_blurb_text')); ?></textarea>
             </td>
         </tr>
         <tr valign="top">
-            <th scope="row"><label for="blurb_link">Request Quote Link</label></th>
+            <th scope="row"><label for="blurb_link">Request quote link</label></th>
             <td>
                 <input name="blurb_link" type="text" id="blurb_link" value="<?php echo get_option('boldy_blurb_link'); ?>" class="regular-text" />
-                <br />
-                <em>You can either enter a link manually or select a page to point at.</em>
+                <p class="notice">
+                    You can either enter a link manually or select a page to point at.
+                </p>
             </td>
         </tr>
-        
         <tr valign="top">
-            <th scope="row"><label for="blurb_page">Request Quote Page</label></th>
+            <th scope="row"><label for="blurb_page">Request quote page</label></th>
             <td>
                 <?php wp_dropdown_pages("name=blurb_page&show_option_none=".__('- Select -')."&selected=" .get_option('boldy_blurb_page')); ?>
-                <br />
-                <em>You can either enter a link manually or select a page to point at.</em>
+                <p class="notice">
+                    You can either enter a link manually or select a page to point at.
+                </p>
             </td>
         </tr>
     </table>
     </fieldset>
+    
     <p class="submit">
         <input type="submit" name="Submit" class="button-primary" value="Save Changes" />
         <input type="hidden" name="boldy_settings" value="save" style="display:none;" />
-        </p>
+    </p>
     
+    <!-- Contact settings -->
     <fieldset style="border:1px solid #ddd; padding-bottom:20px; margin-top:20px;">
-    <legend style="margin-left:5px; padding:0 5px; color:#2481C6;text-transform:uppercase;"><strong>Contact Page Settings</strong></legend>
-        <table class="form-table">    
+    <legend><h3>Contact page settings</h3></legend>
+    <table class="form-table">    
         <tr>
             <td colspan="2"></td>
         </tr>
          <tr valign="top">
-            <th scope="row"><label for="contact_text">Contact Page Text</label></th>
+            <th scope="row"><label for="contact_text">Contact page text</label></th>
             <td>
                 <textarea name="contact_text" id="contact_text" rows="7" cols="70" style="font-size:11px;"><?php echo stripslashes(get_option('boldy_contact_text')); ?></textarea>
             </td>
         </tr>
         <tr valign="top">
-            <th scope="row"><label for="contact_email">Email Address for Contact Form</label></th>
+            <th scope="row"><label for="contact_email">Email address for Contact form</label></th>
             <td>
                 <input name="contact_email" type="text" id="contact_email" value="<?php echo get_option('boldy_contact_email'); ?>" class="regular-text" />
             </td>
         </tr>
-        </table>
-     </fieldset>
-     <p class="submit">
+    </table>
+    </fieldset>
+    
+    <p class="submit">
         <input type="submit" name="Submit" class="button-primary" value="Save Changes" />
         <input type="hidden" name="boldy_settings" value="save" style="display:none;" />
     </p>
     
+    <!-- Footer settings -->
     <fieldset style="border:1px solid #ddd; padding-bottom:20px; margin-top:20px;">
-    <legend style="margin-left:5px; padding:0 5px; color:#2481C6;text-transform:uppercase;"><strong>Footer</strong></legend>
-        <table class="form-table">
+    <legend><h3>Footer</h3></legend>
+    <table class="form-table">
         <tr>
-            <th colspan="2"><strong>Footer Twitter &amp; Quick Contact </strong></th>
+            <th colspan="2"><h4>Footer twitter &amp; quick contact</h4></th>
         </tr>
         <tr>
-            <th><label for="footer_actions">Display Footer Twitter &amp; Quick Contact Section</label></th>
+            <th><label for="footer_actions">Display footer twitter &amp; quick contact section</label></th>
             <td>
                 <select name="footer_actions" id="footer_actions"> 
                     <option value="yes" <?php if(get_option('boldy_footer_actions') == 'yes'){?>selected="selected"<?php }?>>Yes</option>        
@@ -595,7 +652,7 @@ function boldy_settings()
             </td>
         </tr>
         <tr>
-            <th><label for="actions_hide">Default Section Visibility</label></th>
+            <th><label for="actions_hide">Default section visibility</label></th>
             <td>
                 <select name="actions_hide" id="actions_hide"> 
                     <option value="visible" <?php if(get_option('boldy_actions_hide') == 'visible'){?>selected="selected"<?php }?>>Visible</option>        
@@ -604,53 +661,58 @@ function boldy_settings()
             </td>
         </tr>
         <tr>
-            <th colspan="2"><strong>Copyright Info</strong></th>
+            <th colspan="2"><h4>Copyright info</h4></th>
         </tr>
         <tr>
-            <th><label for="copyright">Copyright Text</label></th>
+            <th><label for="copyright">Copyright text</label></th>
             <td>
                 <textarea name="copyright" id="copyright" rows="4" cols="70" style="font-size:11px;"><?php echo stripslashes(get_option('boldy_copyright')); ?></textarea><br />
-                <em>You can use HTML for links etc.</em>
+                <p class="notice">
+                    You can use HTML for links etc.
+                </p>
             </td>
         </tr>
-        
-        
     </table>
     </fieldset>
+    
     <p class="submit">
         <input type="submit" name="Submit" class="button-primary" value="Save Changes" />
         <input type="hidden" name="boldy_settings" value="save" style="display:none;" />
     </p>
-        
-      <fieldset style="border:1px solid #ddd; padding-bottom:20px; margin-top:20px;">
-    <legend style="margin-left:5px; padding:0 5px; color:#2481C6;text-transform:uppercase;"><strong>SEO</strong></legend>
-        <table class="form-table">
+    
+    <!-- SEO settings -->
+    <fieldset style="border:1px solid #ddd; padding-bottom:20px; margin-top:20px;">
+    <legend><h3>SEO</h3></legend>
+    <table class="form-table">
         <tr>
-            <th><label for="keywords">Meta Keywords</label></th>
+            <th><label for="keywords">Meta keywords</label></th>
             <td>
                 <textarea name="keywords" id="keywords" rows="7" cols="70" style="font-size:11px;"><?php echo get_option('boldy_keywords'); ?></textarea><br />
-                <em>Keywords comma separated</em>
+                <p class="notice">
+                    Keywords comma separated
+                </p>
             </td>
         </tr>
         <tr>
-            <th><label for="description">Meta Description</label></th>
+            <th><label for="description">Meta description</label></th>
             <td>
                 <textarea name="description" id="description" rows="7" cols="70" style="font-size:11px;"><?php echo get_option('boldy_description'); ?></textarea>
             </td>
         </tr>
         <tr>
-            <th><label for="ads">Google Analytics code:</label></th>
+            <th><label for="ads">Google analytics code:</label></th>
             <td>
                 <textarea name="analytics" id="analytics" rows="7" cols="70" style="font-size:11px;"><?php echo stripslashes(get_option('boldy_analytics')); ?></textarea>
             </td>
         </tr>
-        
     </table>
     </fieldset>
+    
     <p class="submit">
         <input type="submit" name="Submit" class="button-primary" value="Save Changes" />
         <input type="hidden" name="boldy_settings" value="save" style="display:none;" />
     </p>
+    
 </form>
 </div>
 <?php 
