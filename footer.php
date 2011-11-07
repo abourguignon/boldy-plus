@@ -60,12 +60,17 @@
 				<!-- END FOOTER WIDGETS -->
 				<!-- BEGIN COPYRIGHT -->
 				<div id="copyright">
-					<?php if (get_option('boldy_copyright') <> ""){
-						echo stripslashes(stripslashes(get_option('boldy_copyright')));
-						}else{
+					<?php
+                        if (get_option('boldy_copyright') <> "")
+                        {
+						    echo stripslashes(stripslashes(get_option('boldy_copyright')));
+						}
+                        else
+                        {
 							echo 'Just go to Theme Options Page and edit copyright text';
-						}?> 
-						<div id="site5bottom"><a href="http://www.site5.com/p/joomla/">Joomla Web Hosting</a></div>
+						}
+                    ?> 
+					<!-- Pretty theme made in Site5: http://www.site5.com/ -->
 				</div>
 				<!-- END COPYRIGHT -->						
 				</div>
@@ -75,11 +80,10 @@
 	<!-- END FOOTER -->
 </div>
 <!-- END MAINWRAPPER -->
-<?php if (get_option(' boldy_analytics') <> "") { 
+<?php if (get_option(' boldy_analytics') <> "") 
+	{ 
 		echo stripslashes(stripslashes(get_option('boldy_analytics'))); 
 	} ?>
 <?php wp_footer(); ?>
 </body>
 </html>
-
-

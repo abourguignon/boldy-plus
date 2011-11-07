@@ -48,9 +48,12 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php if(is_home()){
+<body <?php if(is_home())
+			{
 				echo 'id="home"';
-			}elseif(is_category(get_option('boldy_portfolio')) || post_is_in_descendant_category( get_option('boldy_portfolio')) && !is_single()){
+			}
+			elseif(is_category(get_option('boldy_portfolio')) || post_is_in_descendant_category( get_option('boldy_portfolio')) && !is_single())
+			{
 				echo 'id="portfolio"';
 			}?>>
 <!-- BEGINN MAINWRAPPER -->

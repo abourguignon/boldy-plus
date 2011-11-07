@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 	<!-- BEGIN SLIDER -->
-	  <div id="slider">
+		<div id="slider">
 	  		<?php if(get_option('boldy_slider')!=''){
 			$page_data = get_page(get_option('boldy_slider'));
 					$content = $page_data->post_content;
@@ -11,11 +11,12 @@
 				</div>
 			<?php }?>
 		</div>
-	   <div style="width:960px; margin:0 auto; background:url(<?php bloginfo('template_directory'); ?>/images/bk_shadow_slider.png) 0 0 no-repeat; height:50px;"></div>
-	   <!-- END SLIDER -->
-	   <!-- BEGIN BLURB -->
-	   <?php if(get_option('boldy_blurb_enable')=="yes" && get_option('boldy_blurb_text')!=""){ ?>
-	   <div id="blurb">
+		<div style="width:960px; margin:0 auto; background:url(<?php bloginfo('template_directory'); ?>/images/bk_shadow_slider.png) 0 0 no-repeat; height:50px;"></div>
+		<!-- END SLIDER -->
+		
+		<!-- BEGIN BLURB -->
+		<?php if(get_option('boldy_blurb_enable')=="yes" && get_option('boldy_blurb_text')!=""){ ?>
+		<div id="blurb">
 			<p>
 			<a href="<?php 
 			if(get_option('boldy_blurb_page')!=""){
@@ -25,9 +26,10 @@
 			} ?>"><img src="<?php bloginfo('template_directory'); ?>/images/but_blurb.png" alt="" /></a>
 			<?php echo get_option('boldy_blurb_text'); ?> 
 			</p>
-	   </div>
-	   <?php }?>
-	   <!-- END BLURB -->
+		</div>
+		<?php }?>
+		<!-- END BLURB -->
+	   
 	   <!-- BEGIN HOME CONTENT -->
 	   <!-- begin home boxes -->
 		<?php $box1=get_post(get_option('boldy_home_box1'));
@@ -53,10 +55,10 @@
 		</div>
 		<?php }?>
 		<!-- end home boxes -->
-	   <!-- END HOME CONTENT -->
-	   
-	   <!-- SLIDER SETTINGS -->
-	   <script type="text/javascript">
+		<!-- END HOME CONTENT -->
+		
+		<!-- SLIDER SETTINGS -->
+		<script type="text/javascript">
 			$(window).load(function() {
 				$('#slider').nivoSlider({
 					effect:'random', //Specify sets like: 'fold,fade,sliceDown'
@@ -80,6 +82,6 @@
 					slideshowEnd: function(){} //Triggers after all slides have been shown
 				});
 			});
-			</script>
+		</script>
 
 <?php get_footer(); ?>
