@@ -15,33 +15,35 @@
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.nivo.slider.pack.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.prettyPhoto.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/custom.js"></script>
+<?php if (get_option('boldy_cufon') != "no") : ?>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/cufon-yui.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/Museo_Slab_500_400.font.js"></script>
-<!-- Cufon init -->
-	<script type="text/javascript">
-		<?php if(get_option('boldy_cufon')!="no"):?>
-			Cufon.replace('h1',{hover: true})('h2',{hover: true})('h3')('.reply',{hover:true})('.more-link');
-		 <?php endif ?>
-	</script>
-	<script type="text/javascript">
-		 $(document).ready(function(){
-			  $('#quickContactForm').ajaxForm(function(data) {
-				 if (data==1){
-					 $('#success').fadeIn("slow");
-					 $('#bademail').fadeOut("slow");
-					 $('#badserver').fadeOut("slow");
-					 $('#contact').resetForm();
-					 }
-				 else if (data==2){
-						 $('#badserver').fadeIn("slow");
-					  }
-				 else if (data==3)
-					{
-					 $('#bademail').fadeIn("slow");
-					}
-					});
-				 });
-		</script>
+<script type="text/javascript">
+	Cufon.replace('h1',{hover: true})('h2',{hover: true})('h3')('.reply',{hover:true})('.more-link');
+</script>
+<?php endif; ?>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#quickContactForm').ajaxForm(function(data){
+			if (data==1)
+			{
+				$('#success').fadeIn("slow");
+				$('#bademail').fadeOut("slow");
+				$('#badserver').fadeOut("slow");
+				$('#contact').resetForm();
+			}
+			else if (data==2)
+			{
+				$('#badserver').fadeIn("slow");
+			}
+			else if (data==3)
+			{
+				$('#bademail').fadeIn("slow");
+			}
+		});
+	});
+</script>
+
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<?php wp_get_archives('type=monthly&format=link'); ?>
 	<?php //comments_popup_script(); // off by default ?>
