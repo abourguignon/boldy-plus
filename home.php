@@ -30,12 +30,55 @@
 		<?php }?>
 		<!-- END BLURB -->
 	   
-	   <!-- BEGIN HOME CONTENT -->
-	   <!-- begin home boxes -->
-		<?php $box1=get_post(get_option('boldy_home_box1'));
-				  $box2=get_post(get_option('boldy_home_box2'));
-				  $box3=get_post(get_option('boldy_home_box3')); 
-				  if(get_option('boldy_home_box1')!= null && get_option('boldy_home_box2')!= null && get_option('boldy_home_box3')!= null){?>
+		<!-- BEGIN HOME CONTENT -->
+		<!-- begin home news -->
+		<?php 
+        if (get_option('boldy_home_news_boxes') == 'yes')
+        {
+		    query_posts('posts_per_page=3');
+		    if (have_posts()) 
+		    {
+			    ?>
+			    <div id="homeBoxes" class="clearfix">
+			    <?php
+			    $boxNumber = 0;
+			    while (have_posts())
+			    {
+				    $boxNumber++;
+				    the_post();
+				    ?>
+				    <div class="homeBox<?php if ($boxNumber == 3) : ?> last<?php endif; ?>">
+					    <h2><?php the_title(); ?></h2>
+					
+					    <div class="meta">
+					    <?php the_time('h\hm') ?> &nbsp;&nbsp;//&nbsp;&nbsp; by <span class="author"><?php the_author_link(); ?></span>
+					    </div>
+					
+					    <?php if (has_post_thumbnail()) : ?>
+					    <p>
+						    <?php the_post_thumbnail(); ?>
+					    </p>
+					    <?php endif; ?>
+					    <?php the_excerpt(); ?>
+					    <a class="more-link" href="<?php the_permalink(); ?>"><?php _e("Read more", "boldy"); ?> &raquo;</a>
+				    </div>
+				    <?php
+			    }
+			    ?>
+			    </div>
+			    <?php
+		    }
+        }
+		?>
+		<!-- end home news -->
+		
+		<!-- begin home boxes -->
+		<?php 
+		$box1=get_post(get_option('boldy_home_box1'));
+		$box2=get_post(get_option('boldy_home_box2'));
+		$box3=get_post(get_option('boldy_home_box3'));
+		?>
+		
 		<div id="homeBoxes" class="clearfix">
 			<div class="homeBox">
 				<h2><?php echo $box1->post_title?></h2>

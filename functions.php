@@ -338,6 +338,7 @@ function boldy_theme_page ()
             'description',
             'analytics',
             'copyright',
+            'home_news_boxes',
             'home_box1',
             'home_box1_link',
             'home_box2',
@@ -533,9 +534,18 @@ function boldy_settings()
         <tr>
             <th colspan="2">
                 They should be ALL selected ! Otherwise the row won't appear at all.<br />
-                The text displayed will be page's excerpt.  If you don't know how to editate a page's excerpt, use a WP plugin like <em>Page Excerpt Plugin</em>.<br />
+                The text displayed will be page's excerpt.  If you don't know how to edit a page's excerpt, use a WP plugin like <em>Page Excerpt Plugin</em>.<br />
                 If you want to put a picture in the box (between the title and the text), just set a post thumbnail (ideal dimensions: 274 x 101).
             </th>
+        </tr>
+        <tr valign="top">
+            <th scope="row"><label for="home_news_boxes">Put the 3 last newses on the homepage</label></th>
+            <td>
+                <select name="home_news_boxes" id="home_news_boxes">
+                    <option value="yes" <?php if(get_option('boldy_home_news_boxes') == 'yes'){?>selected="selected"<?php }?>>Yes</option>
+                    <option value="no" <?php if(get_option('boldy_home_news_boxes') == 'no'){?>selected="selected"<?php }?>>No</option>
+                </select>
+            </td>
         </tr>
         <tr valign="top">
             <th scope="row"><label for="home_box1">Home box1 page</label></th>
