@@ -7,22 +7,22 @@
 		<!-- archive-title -->				
 						<?php if(is_month()) { ?>
 						<div id="archive-title">
-						Browsing articles from "<strong><?php the_time('F, Y') ?></strong>"
+						<?php _e("Browsing articles from", "boldy"); ?> "<strong><?php the_time('F, Y') ?></strong>"
 						</div>
 						<?php } ?>
 						<?php if(is_category()) { ?>
 						<div id="archive-title">
-						Browsing articles in "<strong><?php $current_category = single_cat_title("", true); ?></strong>"
+						<?php _e("Browsing articles in", "boldy"); ?> "<strong><?php $current_category = single_cat_title("", true); ?></strong>"
 						</div>
 						<?php } ?>
 						<?php if(is_tag()) { ?>
 						<div id="archive-title">
-						Browsing articles tagged with "<strong><?php wp_title('',true,''); ?></strong>"
+						<?php _e("Browsing articles tagged with", "boldy"); ?> "<strong><?php wp_title('',true,''); ?></strong>"
 						</div>
 						<?php } ?>
 						<?php if(is_author()) { ?>
 						<div id="archive-title">
-						Browsing articles by "<strong><?php wp_title('',true,''); ?></strong>"
+						<?php _e("Browsing articles by", "boldy"); ?> "<strong><?php wp_title('',true,''); ?></strong>"
 						</div>
 						<?php } ?>
 					<!-- /archive-title -->
@@ -34,8 +34,8 @@
 		
 				<h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1> 
 				<div class="meta">
-							<?php the_time('M j, Y') ?> &nbsp;&nbsp;//&nbsp;&nbsp; by <span class="author"><?php the_author_link(); ?></span> &nbsp;&nbsp;//&nbsp;&nbsp;  <?php the_category(', ') ?>  &nbsp;//&nbsp;  <?php comments_popup_link('No Comments', '1 Comment ', '% Comments'); ?> 
-						</div>
+					<?php the_time('M j, Y') ?> &nbsp;&nbsp;//&nbsp;&nbsp; <?php _e("by", "boldy"); ?> <span class="author"><?php the_author_link(); ?></span> &nbsp;&nbsp;//&nbsp;&nbsp;  <?php the_category(', ') ?>  &nbsp;//&nbsp;  <?php comments_popup_link('No Comments', '1 Comment ', '% Comments'); ?> 
+				</div>
 				<?php the_content(__('Read more >>')); ?> 
 				
 		</div>
@@ -46,7 +46,7 @@
 
 	<?php else : ?>
 
-		<p>Sorry, but you are looking for something that isn't here.</p>
+		<p><?php _e("Sorry, but you are looking for something that isn't here.", "boldy"); ?></p>
 
 	<?php endif; ?>
             <!--<div class="navigation">
