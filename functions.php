@@ -332,6 +332,7 @@ function boldy_theme_page ()
             'twitter_user',
             'latest_tweet',
             'facebook_link',
+            'linkedin_link',
             'share_shortcut',
             'keywords',
             'description',
