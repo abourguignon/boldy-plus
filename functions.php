@@ -332,6 +332,7 @@ function boldy_theme_page ()
             'twitter_user',
             'latest_tweet',
             'facebook_link',
+            'share_shortcut',
             'keywords',
             'description',
             'analytics',
@@ -491,9 +492,19 @@ function boldy_settings()
                 <input name="linkedin_link" type="text" id="linkedin_link" value="<?php echo get_option('boldy_linkedin_link'); ?>" class="regular-text" />
             </td>
         </tr>
-        </table>
-        </fieldset>
-        <p class="submit">
+        <tr valign="top">
+            <th scope="row"><label for="share_shortcut">Display the "Share and bookmark" shortcut in posts</label></th>
+            <td>
+                <select name="share_shortcut" id="share_shortcut">
+                    <option value="yes" <?php if(get_option('boldy_share_shortcut') == 'yes'){?>selected="selected"<?php }?>>Yes</option>
+                    <option value="no" <?php if(get_option('boldy_share_shortcut') == 'no'){?>selected="selected"<?php }?>>No</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    </fieldset>
+    
+    <p class="submit">
         <input type="submit" name="Submit" class="button-primary" value="Save Changes" />
         <input type="hidden" name="boldy_settings" value="save" style="display:none;" />
     </p>
