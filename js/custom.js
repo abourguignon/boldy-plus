@@ -19,8 +19,7 @@ $('#showHide').click(function(){
 		$("#footerActions").slideDown("slow");
 		
 		} else {
-		$(this).css('background-position','0 -16px') 
-		$("#footerActions").hide();
+		$(this).css('background-position','0 -16px')
 		$("#footerActions").slideUp("slow");
 		}
 	return false;			   
@@ -37,10 +36,6 @@ $('#s').blur(function() {
 });
 
 // QUICK CONTACT
-
-$('#quickName').val('your name');
-$('#quickEmail').val('your email');
-$('#quickComment').val('your message');
 
 $('#quickName').focus(function() {
 		$(this).val('');	
