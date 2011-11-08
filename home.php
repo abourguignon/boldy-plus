@@ -120,7 +120,7 @@
 		<script type="text/javascript">
 			$(window).load(function() {
 				$('#slider').nivoSlider({
-					effect:'random', //Specify sets like: 'fold,fade,sliceDown'
+					effect:'fold', //Specify sets like: 'fold,fade,sliceDown'
 					slices:15,
 					animSpeed:500,
 					pauseTime:3000,
