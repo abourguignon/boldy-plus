@@ -439,7 +439,7 @@ blockquote {
 	top:0px;
 	left:0px;
 	display:none;
-	z-index:1;
+	z-index:10;
 }
 
 /* PORTFOLIO PAGE 
@@ -735,9 +735,8 @@ line-height:140%;
 #footerWidgetsInner .boxFooter ul li {
 	padding:7px 0;
 	border-bottom:1px solid #292929;
-	color:#986123;
+	color:#515151;
 	font-size:10px;
-	font-style:italic;
 }
 
 #footerWidgetsInner .boxFooter ul li a {
@@ -749,6 +748,14 @@ line-height:140%;
 
 #footerWidgetsInner .boxFooter ul li a:hover {
 	color:#ccc;
+}
+
+#footer .boxFooter ul.children {
+	margin-left: 10px;
+}
+
+#footer .boxFooter ul.children li {
+	border-bottom: 0;
 }
 
 /* Copyright */
@@ -946,4 +953,3 @@ line-height:140%;
 
 ?#header{z-index:1001 !important;}
 #content{z-index:100 !important;}
-
