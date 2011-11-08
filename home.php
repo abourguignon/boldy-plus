@@ -79,24 +79,40 @@
 		$box3=get_post(get_option('boldy_home_box3'));
 		?>
 		
+		<?php if(get_option('boldy_home_box1')!= null && get_option('boldy_home_box2')!= null && get_option('boldy_home_box3')!= null) : ?>
 		<div id="homeBoxes" class="clearfix">
 			<div class="homeBox">
 				<h2><?php echo $box1->post_title?></h2>
-				<?php echo apply_filters('the_content', $box1->post_content);?>
+				<?php if (has_post_thumbnail($box1->ID)) : ?>
+					<p>
+						<?php echo get_the_post_thumbnail($box1->ID); ?>
+					</p>
+				<?php endif; ?>
+				<?php echo apply_filters('the_content', $box1->post_excerpt);?>
 				<a href="<?php echo get_option('boldy_home_box1_link')?>"><strong>Read more &raquo;</strong></a>
 			</div>
 			<div class="homeBox">
 				<h2><?php echo $box2->post_title?></h2>
-				<?php echo apply_filters('the_content', $box2->post_content);?>
+				<?php if (has_post_thumbnail($box2->ID)) : ?>
+					<p>
+						<?php echo get_the_post_thumbnail($box2->ID); ?>
+					</p>
+				<?php endif; ?>
+				<?php echo apply_filters('the_content', $box2->post_excerpt);?>
 				<a href="<?php echo get_option('boldy_home_box2_link')?>"><strong>Read more &raquo;</strong></a>
 			</div>
 			<div class="homeBox last">
 				<h2><?php echo $box3->post_title?></h2>
-				<?php echo apply_filters('the_content', $box3->post_content);?>
+				<?php if (has_post_thumbnail($box3->ID)) : ?>
+					<p>
+						<?php echo get_the_post_thumbnail($box3->ID); ?>
+					</p>
+				<?php endif; ?>
+				<?php echo apply_filters('the_content', $box3->post_excerpt);?>
 				<a href="<?php echo get_option('boldy_home_box3_link')?>"><strong>Read more &raquo;</strong></a>
 			</div>
 		</div>
-		<?php }?>
+		<?php endif; ?>
 		<!-- end home boxes -->
 		<!-- END HOME CONTENT -->
 		
