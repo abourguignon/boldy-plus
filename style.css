@@ -284,6 +284,14 @@ body#home #content, body#portfolio #content {
 	font-size:24px;
 }
 
+#homeBoxes p {
+	text-align: justify;
+}
+
+#homeBoxes .more-link {
+	font-weight: bold;
+}
+
 .more-link {
 	padding:20px 0 0 0;
 }
@@ -412,6 +420,26 @@ blockquote {
 	margin:0 10px;
 	font-weight:bold;
 	text-transform:uppercase;
+}
+
+.wp-caption {
+    background-color: #F3F3F3;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px 3px 3px 3px;
+    padding-top: 4px;
+    text-align: center;
+}
+.wp-caption img {
+    border: medium none;
+    margin: 0;
+    padding: 0;
+}
+.wp-caption p.wp-caption-text {
+    color: #111111;
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
 }
 
 
