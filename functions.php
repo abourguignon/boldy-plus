@@ -450,7 +450,8 @@ function boldy_settings()
                     <option value="no" <?php if(get_option('boldy_cufon') == 'no'){?>selected="selected"<?php }?>>No</option>
                 </select><br />
                 <p class="notice">
-                    Use <em>cufon-yui.js</em> to introduce a nice custom font in the theme.
+                    Use <em>cufon-yui.js</em> to introduce a nice custom font in the theme.<br />
+                    Caution: cufon can be messy with accented characters.
                 </p>
             </td>
         </tr>
