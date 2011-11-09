@@ -30,7 +30,6 @@ $(document).ready(function(){
         <p><?php echo stripslashes(stripslashes(get_option('boldy_contact_text')))?></p>
 
         <p id="success" class="successmsg" style="display:none;"><?php _e("Your e-mail has been sent. Thank you!", "boldy"); ?></p>
-
         <p id="bademail" class="errormsg" style="display:none;"><?php _e("Please enter your name, a message and a valid e-mail address.", "boldy"); ?></p>
         <p id="badserver" class="errormsg" style="display:none;"><?php _e("Your e-mail failed. Try again later.", "boldy"); ?></p>
 
@@ -42,11 +41,11 @@ $(document).ready(function(){
             <input type="text" id="emailinput" name="email" value=""/>
         <label for="comment"><?php _e("Your message", "boldy"); ?>: *</label>
             <textarea cols="20" rows="7" id="commentinput" name="comment"></textarea><br />
-        <input type="submit" id="submitinput" name="submit" class="submit" value="<?php _e("Send message", "boldy"); ?>"/>
+        <input type="submit" id="submitinput" name="submit" class="submit" value="<?php _e("Send", "boldy"); ?>"/>
         <input type="hidden" id="receiver" name="receiver" value="<?php echo strhex(get_option('boldy_contact_email')); ?>"/>
         </form>
     </div>
-    <!-- end colleft -->
+<!-- end colleft -->
 
             <?php get_sidebar(); ?>
 

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Boldy+ in french\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-09 12:15+0100\n"
-"PO-Revision-Date: 2011-11-09 12:17+0100\n"
+"POT-Creation-Date: 2011-11-09 14:15+0100\n"
+"PO-Revision-Date: 2011-11-09 14:15+0100\n"
 "Last-Translator: Antonin Bourguignon <antonin.bourguignon@gmail.com>\n"
 "Language-Team: \n"
 "Language: \n"
@@ -15,44 +15,44 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-SearchPath-0: /var/www/boldy-plus\n"
 
-#: /var/www/boldy-plus/header.php:79
+#: /var/www/boldy-plus/header.php:89
 msgid "Type your search"
 msgstr "Rechercher"
 
-#: /var/www/boldy-plus/contact.php:33
+#: /var/www/boldy-plus/contact.php:32
 #: /var/www/boldy-plus/footer.php:39
 msgid "Your e-mail has been sent. Thank you!"
 msgstr "Votre e-mail a "
 
-#: /var/www/boldy-plus/contact.php:35
-#: /var/www/boldy-plus/footer.php:41
+#: /var/www/boldy-plus/contact.php:33
+#: /var/www/boldy-plus/footer.php:40
 msgid "Please enter your name, a message and a valid e-mail address."
 msgstr "Merci d'entrer votre nom ainsi qu'un message et une adresse e-mail correcte."
 
-#: /var/www/boldy-plus/contact.php:36
-#: /var/www/boldy-plus/footer.php:42
+#: /var/www/boldy-plus/contact.php:34
+#: /var/www/boldy-plus/footer.php:41
 msgid "Your e-mail failed. Try again later."
 msgstr "Votre e-mail n'a pu être envoyé.  Merci de réessayer plus tard."
 
-#: /var/www/boldy-plus/contact.php:39
+#: /var/www/boldy-plus/contact.php:37
 #: /var/www/boldy-plus/footer.php:45
 msgid "Your name"
 msgstr "Votre nom"
 
-#: /var/www/boldy-plus/contact.php:41
+#: /var/www/boldy-plus/contact.php:39
 #: /var/www/boldy-plus/footer.php:46
 msgid "Your e-mail"
 msgstr "Votre e-mail"
 
-#: /var/www/boldy-plus/contact.php:44
+#: /var/www/boldy-plus/contact.php:42
 #: /var/www/boldy-plus/footer.php:50
 msgid "Your message"
 msgstr "Votre message"
 
-#: /var/www/boldy-plus/contact.php:46
+#: /var/www/boldy-plus/contact.php:44
 #: /var/www/boldy-plus/footer.php:47
-msgid "Send message"
-msgstr "Envoyer votre message"
+msgid "Send"
+msgstr "Envoyer"
 
 #: /var/www/boldy-plus/index.php:10
 msgid "Browsing articles from"
@@ -76,10 +76,10 @@ msgid "by"
 msgstr "par"
 
 #: /var/www/boldy-plus/index.php:39
-#: /var/www/boldy-plus/home.php:63
-#: /var/www/boldy-plus/home.php:92
-#: /var/www/boldy-plus/home.php:102
-#: /var/www/boldy-plus/home.php:112
+#: /var/www/boldy-plus/home.php:73
+#: /var/www/boldy-plus/home.php:103
+#: /var/www/boldy-plus/home.php:113
+#: /var/www/boldy-plus/home.php:123
 #: /var/www/boldy-plus/single.php:11
 msgid "Read more"
 msgstr "Lire la suite"
@@ -89,39 +89,39 @@ msgstr "Lire la suite"
 msgid "Sorry, but you are looking for something that isn't here."
 msgstr "Désolé, ce que vous cherchez ne se trouve pas ici."
 
-#: /var/www/boldy-plus/functions.php:15
+#: /var/www/boldy-plus/functions.php:26
 msgid "Main menu"
 msgstr "Menu principal"
 
-#: /var/www/boldy-plus/functions.php:175
+#: /var/www/boldy-plus/functions.php:186
 msgid "Pages"
 msgstr "Pages"
 
-#: /var/www/boldy-plus/functions.php:297
+#: /var/www/boldy-plus/functions.php:308
 msgid "Edit"
 msgstr "Éditer"
 
-#: /var/www/boldy-plus/functions.php:297
+#: /var/www/boldy-plus/functions.php:308
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: /var/www/boldy-plus/functions.php:306
+#: /var/www/boldy-plus/functions.php:317
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: /var/www/boldy-plus/functions.php:365
-#: /var/www/boldy-plus/functions.php:366
+#: /var/www/boldy-plus/functions.php:376
+#: /var/www/boldy-plus/functions.php:377
 msgid "Boldy options"
 msgstr "Boldy options"
 
-#: /var/www/boldy-plus/functions.php:449
-#: /var/www/boldy-plus/functions.php:455
-#: /var/www/boldy-plus/functions.php:524
-#: /var/www/boldy-plus/functions.php:553
-#: /var/www/boldy-plus/functions.php:565
-#: /var/www/boldy-plus/functions.php:577
-#: /var/www/boldy-plus/functions.php:619
+#: /var/www/boldy-plus/functions.php:462
+#: /var/www/boldy-plus/functions.php:468
+#: /var/www/boldy-plus/functions.php:537
+#: /var/www/boldy-plus/functions.php:566
+#: /var/www/boldy-plus/functions.php:578
+#: /var/www/boldy-plus/functions.php:590
+#: /var/www/boldy-plus/functions.php:632
 msgid "Select"
 msgstr "Sélectionner"
 
@@ -194,3 +194,5 @@ msgstr "Suivez-nous !"
 msgid "Just go to Theme options page and edit copyright text"
 msgstr "Rendez-vous simplement sur la page d'options du thème et modifier le texte du copyright"
 
+#~ msgid "Send message"
+#~ msgstr "Envoyer votre message"
