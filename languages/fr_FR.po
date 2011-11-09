@@ -1,0 +1,196 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Boldy+ in french\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-11-09 12:15+0100\n"
+"PO-Revision-Date: 2011-11-09 12:17+0100\n"
+"Last-Translator: Antonin Bourguignon <antonin.bourguignon@gmail.com>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-SearchPath-0: /var/www/boldy-plus\n"
+
+#: /var/www/boldy-plus/header.php:79
+msgid "Type your search"
+msgstr "Rechercher"
+
+#: /var/www/boldy-plus/contact.php:33
+#: /var/www/boldy-plus/footer.php:39
+msgid "Your e-mail has been sent. Thank you!"
+msgstr "Votre e-mail a "
+
+#: /var/www/boldy-plus/contact.php:35
+#: /var/www/boldy-plus/footer.php:41
+msgid "Please enter your name, a message and a valid e-mail address."
+msgstr "Merci d'entrer votre nom ainsi qu'un message et une adresse e-mail correcte."
+
+#: /var/www/boldy-plus/contact.php:36
+#: /var/www/boldy-plus/footer.php:42
+msgid "Your e-mail failed. Try again later."
+msgstr "Votre e-mail n'a pu être envoyé.  Merci de réessayer plus tard."
+
+#: /var/www/boldy-plus/contact.php:39
+#: /var/www/boldy-plus/footer.php:45
+msgid "Your name"
+msgstr "Votre nom"
+
+#: /var/www/boldy-plus/contact.php:41
+#: /var/www/boldy-plus/footer.php:46
+msgid "Your e-mail"
+msgstr "Votre e-mail"
+
+#: /var/www/boldy-plus/contact.php:44
+#: /var/www/boldy-plus/footer.php:50
+msgid "Your message"
+msgstr "Votre message"
+
+#: /var/www/boldy-plus/contact.php:46
+#: /var/www/boldy-plus/footer.php:47
+msgid "Send message"
+msgstr "Envoyer votre message"
+
+#: /var/www/boldy-plus/index.php:10
+msgid "Browsing articles from"
+msgstr "Parcourir les articles à partir de"
+
+#: /var/www/boldy-plus/index.php:15
+msgid "Browsing articles in"
+msgstr "Parcourir les articles dans"
+
+#: /var/www/boldy-plus/index.php:20
+msgid "Browsing articles tagged with"
+msgstr "Parcourir les articles taggés avec "
+
+#: /var/www/boldy-plus/index.php:25
+msgid "Browsing articles by"
+msgstr "Parcourir les articles par"
+
+#: /var/www/boldy-plus/index.php:37
+#: /var/www/boldy-plus/single.php:9
+msgid "by"
+msgstr "par"
+
+#: /var/www/boldy-plus/index.php:39
+#: /var/www/boldy-plus/home.php:63
+#: /var/www/boldy-plus/home.php:92
+#: /var/www/boldy-plus/home.php:102
+#: /var/www/boldy-plus/home.php:112
+#: /var/www/boldy-plus/single.php:11
+msgid "Read more"
+msgstr "Lire la suite"
+
+#: /var/www/boldy-plus/index.php:49
+#: /var/www/boldy-plus/single.php:37
+msgid "Sorry, but you are looking for something that isn't here."
+msgstr "Désolé, ce que vous cherchez ne se trouve pas ici."
+
+#: /var/www/boldy-plus/functions.php:15
+msgid "Main menu"
+msgstr "Menu principal"
+
+#: /var/www/boldy-plus/functions.php:175
+msgid "Pages"
+msgstr "Pages"
+
+#: /var/www/boldy-plus/functions.php:297
+msgid "Edit"
+msgstr "Éditer"
+
+#: /var/www/boldy-plus/functions.php:297
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s à %2$s"
+
+#: /var/www/boldy-plus/functions.php:306
+msgid "Your comment is awaiting moderation."
+msgstr "Votre commentaire est en attente de modération."
+
+#: /var/www/boldy-plus/functions.php:365
+#: /var/www/boldy-plus/functions.php:366
+msgid "Boldy options"
+msgstr "Boldy options"
+
+#: /var/www/boldy-plus/functions.php:449
+#: /var/www/boldy-plus/functions.php:455
+#: /var/www/boldy-plus/functions.php:524
+#: /var/www/boldy-plus/functions.php:553
+#: /var/www/boldy-plus/functions.php:565
+#: /var/www/boldy-plus/functions.php:577
+#: /var/www/boldy-plus/functions.php:619
+msgid "Select"
+msgstr "Sélectionner"
+
+#: /var/www/boldy-plus/page.php:11
+msgid "Sorry, no posts matched your criteria."
+msgstr "Désolé, aucun post ne correspond à vos critères."
+
+#: /var/www/boldy-plus/comments.php:8
+msgid "This post is password protected. Enter the password to view comments."
+msgstr "Ce post est protégé par mot de passe.  Entrez le mot de passe afin de voir les commentaires."
+
+#: /var/www/boldy-plus/comments.php:29
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés."
+
+#: /var/www/boldy-plus/comments.php:39
+msgid "Leave a comment"
+msgstr "Laisser un commentaire"
+
+#: /var/www/boldy-plus/comments.php:39
+#, php-format
+msgid "Leave a comment to %s"
+msgstr "Laisser un commentaire à %s"
+
+#: /var/www/boldy-plus/comments.php:57
+msgid "Name"
+msgstr "Nom"
+
+#: /var/www/boldy-plus/comments.php:61
+msgid "E-mail (will not be published)"
+msgstr "E-mail (ne sera pas publié)"
+
+#: /var/www/boldy-plus/comments.php:65
+msgid "Website"
+msgstr "Site Web"
+
+#: /var/www/boldy-plus/comments.php:73
+msgid "Comment"
+msgstr "Commentaire"
+
+#: /var/www/boldy-plus/single.php:19
+msgid "Tweet this!"
+msgstr ""
+
+#: /var/www/boldy-plus/single.php:21
+msgid "StumbleUpon"
+msgstr ""
+
+#: /var/www/boldy-plus/single.php:23
+msgid "Digg this!"
+msgstr ""
+
+#: /var/www/boldy-plus/single.php:25
+msgid "Bookmark on Delicious"
+msgstr ""
+
+#: /var/www/boldy-plus/single.php:27
+msgid "Share on Facebook"
+msgstr "Partager sur facebook"
+
+#: /var/www/boldy-plus/footer.php:11
+msgid "Show/Hide footer actions"
+msgstr "Voir/Cacher la fenêtre d'actions"
+
+#: /var/www/boldy-plus/footer.php:20
+msgid "Follow us!"
+msgstr "Suivez-nous !"
+
+#: /var/www/boldy-plus/footer.php:73
+msgid "Just go to Theme options page and edit copyright text"
+msgstr "Rendez-vous simplement sur la page d'options du thème et modifier le texte du copyright"
+
