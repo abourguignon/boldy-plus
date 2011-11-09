@@ -2,7 +2,7 @@
     <!-- BEGIN SLIDER -->
         <div id="slider">
             <?php 
-            if(get_option('boldy_slider')!='') {
+            if(get_option('boldy_slider') != '') {
                 $page_data = get_page(get_option('boldy_slider'));
                 $content = $page_data->post_content;
                 echo $page_data->post_content;
@@ -13,7 +13,9 @@
             <div style="border:1px solid #ddd; text-align:center; padding:150px 100px 0; height:219px; font-size:14px;">
                 This is the slider. In order to have items here you need to create a page in which to insert the images, simply one after another, setting up the link to point at ( if needed ) and text captions in the Title field. Then select the page as the "slider page" in the Theme Options Page. Make sure your images are 960px x 370px.
             </div>
-            <?php }?>
+            <?php 
+            }
+            ?>
         </div>
         <div style="width:960px; margin:0 auto; background:url(<?php bloginfo('template_directory'); ?>/images/bk_shadow_slider.png) 0 0 no-repeat; height:50px;"></div>
         <!-- END SLIDER -->
@@ -23,15 +25,19 @@
         <div id="blurb">
             <p>
             <a href="<?php 
-            if(get_option('boldy_blurb_page')!=""){
+            if(get_option('boldy_blurb_page')!="") {
                 echo get_permalink(get_option('boldy_blurb_page'));
-            }elseif(get_option('boldy_blurb_link')!=""){
+            }
+            elseif(get_option('boldy_blurb_link')!=""){
                 echo get_option('boldy_blurb_link');
-            } ?>"><img src="<?php bloginfo('template_directory'); ?>/images/but_blurb.png" alt="" /></a>
+            } 
+            ?>"><img src="<?php bloginfo('template_directory'); ?>/images/but_blurb.png" alt="" /></a>
             <?php echo get_option('boldy_blurb_text'); ?> 
             </p>
         </div>
-        <?php }?>
+        <?php
+        }
+        ?>
         <!-- END BLURB -->
        
         <!-- BEGIN HOME CONTENT -->
@@ -87,10 +93,11 @@
         <div id="homeBoxes" class="clearfix">
             <div class="homeBox">
                 <h2><?php echo $box1->post_title?></h2>
+                
                 <?php if (has_post_thumbnail($box1->ID)) : ?>
-                    <p>
-                        <?php echo get_the_post_thumbnail($box1->ID); ?>
-                    </p>
+                <p>
+                    <?php echo get_the_post_thumbnail($box1->ID); ?>
+                </p>
                 <?php endif; ?>
                 <?php echo apply_filters('the_content', $box1->post_excerpt);?>
                 <a class="more-link" href="<?php echo get_option('boldy_home_box1_link')?>"><?php _e("Read more", "boldy"); ?> &raquo;</a>

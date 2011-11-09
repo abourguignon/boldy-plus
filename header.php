@@ -64,13 +64,23 @@
     <div id="wrapper">
         <!-- BEGIN HEADER -->
         <div id="header">
-            <div id="logo"><a href="<?php bloginfo('url'); ?>/"><img src="<?php echo get_option('boldy_logo_img'); ?>" alt="<?php echo get_option('boldy_logo_alt'); ?>" /></a></div>
+            <div id="logo">
+                <?php if (get_option('boldy_logo_img') != "") : ?>
+                <a href="<?php bloginfo('url'); ?>/"><img src="<?php echo get_option('boldy_logo_img'); ?>" alt="<?php echo get_option('boldy_logo_alt'); ?>" /></a>
+                <?php else : ?>
+                <a href="<?php bloginfo('url'); ?>/"><img src="<?php echo bloginfo('template_directory');?>/images/logo.png" alt="<?php echo get_option('boldy_logo_alt'); ?>" /></a>
+                <?php endif; ?>
+            </div>
+            
             <!-- BEGIN MAIN MENU -->
-            <?php if ( function_exists( 'wp_nav_menu' ) ){
-                    wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_id' => 'mainMenu', 'container_class' => 'ddsmoothmenu', 'fallback_cb'=>'primarymenu') );
-                }else{
-                    primarymenu();
-            }?>
+            <?php 
+            if (function_exists('wp_nav_menu')) {
+                wp_nav_menu( array('theme_location' => 'main-menu', 'container_id' => 'mainMenu', 'container_class' => 'ddsmoothmenu', 'fallback_cb'=>'primarymenu'));
+            }
+            else {
+                primarymenu();
+            }
+            ?>
             <!-- END MAIN MENU -->
             <!-- BEGIN TOP SEARCH -->
             <div id="topSearch">

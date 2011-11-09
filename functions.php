@@ -402,9 +402,10 @@ function boldy_settings()
     
     <fieldset style="border:1px solid #ddd; padding-bottom:20px; margin-top:20px;">
     <legend><h3>Boldy documentation</h3></legend>
-    <img style="margin: 10px; float: left;" src="<?php echo bloginfo('template_directory');?>/images/logo_boldy.png" alt="Boldy logo" />
+    <img style="margin: 10px; float: left;" src="<?php echo bloginfo('template_directory'); ?>/images/logo.png" alt="Boldy+ logo" />
     <p>
-        This is <b>Boldy+</b>, an enhanced version of the Boldy theme, by <a href="http://www.site5.com/">Site5</a>.<br />
+        This is <b>Boldy+</b>, an enhanced version of the <a href=""http://wordpress.site5.net/boldy/">Boldy theme</a>, 
+        by <a href="http://www.site5.com/">Site5</a>.<br />
         You'll find the original documentation about Boldy's usage and configuration on the Site5 website: 
         <a href="http://wordpress.site5.net/boldy/doc/">http://wordpress.site5.net/boldy/doc/</a>, and the 
         Boldy+ documentation on the Google code project page: 
