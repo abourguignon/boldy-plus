@@ -76,7 +76,7 @@
 			<div id="topSearch">
 				<form id="searchform" action="<?php bloginfo('url'); ?>/" method="get">
 					<input type="submit" value="" id="searchsubmit"/>
-					<input type="text" id="s" name="s" value="<?php _e("Type your search", "boldy"); ?>" />
+					<input type="text" id="s" name="s" value="<?php _e("Type your search"); ?>" />
 				</form>
 			</div>
 			<!-- END TOP SEARCH -->

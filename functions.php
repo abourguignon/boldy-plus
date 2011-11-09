@@ -1,6 +1,17 @@
 <?php
 
 /*******************************
+ I18N
+********************************/
+
+add_action('after_setup_theme', 'boldy_i18n');
+        
+function boldy_i18n() {
+    load_theme_textdomain('boldy', get_template_directory() . '/languages');
+}
+
+
+/*******************************
  MENUS SUPPORT
 ********************************/
 
@@ -9,10 +20,10 @@ if ( function_exists( 'wp_nav_menu' ) )
     if (function_exists('add_theme_support')) 
     {
         add_theme_support('nav-menus');
-        add_action( 'init', 'register_my_menus' );
+        add_action('init', 'register_my_menus');
         
         function register_my_menus() {
-            register_nav_menus(array('main-menu' => __( 'Main Menu' )));
+            register_nav_menus(array('main-menu' => __( 'Main menu' )));
         }
     }
 }
@@ -150,11 +161,11 @@ register_sidebar(array(
  *      to add before the pagination links.
  * 'after' - Default is '</div>' (string). The html or text to add after the
  *      pagination links.
- * 'title' - Default is '__('Pages:')' (string). The text to display before the
+ * 'title' - Default is '__('Pages').':'' (string). The text to display before the
  *      pagination links.
- * 'next_page' - Default is '__('&raquo;')' (string). The text to use for the 
+ * 'next_page' - Default is '&raquo;' (string). The text to use for the 
  *      next page link.
- * 'previous_page' - Default is '__('&laquo')' (string). The text to use for the 
+ * 'previous_page' - Default is '&laquo' (string). The text to use for the 
  *      previous page link.
  * 'echo' - Default is 1 (int). To return the code instead of echo'ing, set this
  *      to 0 (zero).
@@ -172,8 +183,8 @@ function emm_paginate($args = null) {
         'page' => null, 'pages' => null, 
         'range' => 3, 'gap' => 3, 'anchor' => 1,
         'before' => '<div class="emm-paginate">', 'after' => '</div>',
-        'title' => __('Pages:'),
-        'nextpage' => __('&raquo;'), 'previouspage' => __('&laquo'),
+        'title' => __('Pages').':',
+        'nextpage' => '&raquo;', 'previouspage' => '&laquo',
         'echo' => 1
     );
 
@@ -294,7 +305,7 @@ function mytheme_comment($comment, $args, $depth) {
     </div>
      <div id="comment-<?php comment_ID(); ?>">
       <div class="comment-meta commentmetadata clearfix">
-        <?php printf(__('<strong>%s</strong>'), get_comment_author_link()) ?><?php edit_comment_link(__('(Edit)'),'  ','') ?> <span><?php printf(__('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?>
+        <strong><?php printf('%s', get_comment_author_link()) ?></strong> (<?php edit_comment_link(__('Edit')) ?>) <span><?php printf(__('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?>
       </span>
       </div>
       
@@ -362,8 +373,8 @@ function boldy_theme_page ()
         }            
          
     }
-    add_menu_page(__('Boldy Options'), __('Boldy Options'), 'edit_themes', basename(__FILE__), 'boldy_settings');
-    add_submenu_page(__('Boldy Options'), __('Boldy Options'), 'edit_themes', basename(__FILE__), 'boldy_settings');
+    add_menu_page(__('Boldy options'), __('Boldy options'), 'edit_themes', basename(__FILE__), 'boldy_settings');
+    add_submenu_page(__('Boldy options'), __('Boldy options'), 'edit_themes', basename(__FILE__), 'boldy_settings');
 }
 
 function boldy_settings()
@@ -385,7 +396,7 @@ function boldy_settings()
 </style>
 
 <div class="wrap">
-    <h2>Boldy Options Panel</h2>
+    <h2>Boldy options panel</h2>
     
 <form method="post" action="">
     
@@ -446,13 +457,13 @@ function boldy_settings()
         <tr valign="top">
             <th scope="row"><label for="b">Choose blog category</label></th>
             <td>
-                <?php wp_dropdown_categories("name=blog&hide_empty=0&show_option_none=".__('- Select -')."&selected=" .get_option('boldy_blog')); ?>
+                <?php wp_dropdown_categories("name=blog&hide_empty=0&show_option_none=- ".__('Select')." -&selected=" .get_option('boldy_blog')); ?>
             </td>
         </tr>
          <tr valign="top">
             <th scope="row"><label for="portfolio">Choose portfolio category</label></th>
             <td>
-                <?php wp_dropdown_categories("name=portfolio&hide_empty=0&show_option_none=".__('- Select -')."&selected=" .get_option('boldy_portfolio')); ?>
+                <?php wp_dropdown_categories("name=portfolio&hide_empty=0&show_option_none=- ".__('Select')." -&selected=" .get_option('boldy_portfolio')); ?>
             </td>
         </tr>
     </table>
@@ -521,7 +532,7 @@ function boldy_settings()
         <tr valign="top">
             <th scope="row"><label for="slider">Homepage slider images page</label></th>
             <td>
-                <?php boldy_dropdown_pages(array('name' => 'slider', 'show_option_none' => __('- Select -'), 'selected' => get_option('boldy_slider'))); ?>
+                <?php boldy_dropdown_pages(array('name' => 'slider', 'show_option_none' => '- '.__('Select').' -', 'selected' => get_option('boldy_slider'))); ?>
                 <p class="notice">
                     If you don't want this special page to be published within the others, in your main menu, set its visibility to "private".<br />
                     The pictures must be 960 x 370px.
@@ -550,7 +561,7 @@ function boldy_settings()
         <tr valign="top">
             <th scope="row"><label for="home_box1">Home box1 page</label></th>
             <td>
-                <?php wp_dropdown_pages("name=home_box1&show_option_none=".__('- Select -')."&selected=" .get_option('boldy_home_box1')); ?>
+                <?php wp_dropdown_pages("name=home_box1&show_option_none=- ".__('Select')." -&selected=" .get_option('boldy_home_box1')); ?>
             </td>
         </tr>
         <tr valign="top">
@@ -562,7 +573,7 @@ function boldy_settings()
         <tr valign="top">
             <th scope="row"><label for="home_box2">Homepage box2 page</label></th>
             <td>
-                <?php wp_dropdown_pages("name=home_box2&show_option_none=".__('- Select -')."&selected=" .get_option('boldy_home_box2')); ?>
+                <?php wp_dropdown_pages("name=home_box2&show_option_none=- ".__('Select')." -&selected=" .get_option('boldy_home_box2')); ?>
             </td>
         </tr>
         <tr valign="top">
@@ -574,7 +585,7 @@ function boldy_settings()
         <tr valign="top">
             <th scope="row"><label for="home_box3">Home box3 page</label></th>
             <td>
-                <?php wp_dropdown_pages("name=home_box3&show_option_none=".__('- Select -')."&selected=" .get_option('boldy_home_box3')); ?>
+                <?php wp_dropdown_pages("name=home_box3&show_option_none=- ".__('Select')." -&selected=" .get_option('boldy_home_box3')); ?>
             </td>
         </tr>    
         <tr valign="top">
@@ -616,7 +627,7 @@ function boldy_settings()
         <tr valign="top">
             <th scope="row"><label for="blurb_page">Request quote page</label></th>
             <td>
-                <?php wp_dropdown_pages("name=blurb_page&show_option_none=".__('- Select -')."&selected=" .get_option('boldy_blurb_page')); ?>
+                <?php wp_dropdown_pages("name=blurb_page&show_option_none=- ".__('Select')." -&selected=" .get_option('boldy_blurb_page')); ?>
                 <p class="notice">
                     You can either enter a link manually or select a page to point at.
                 </p>

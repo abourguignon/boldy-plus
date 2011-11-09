@@ -4,7 +4,7 @@
 		<div id="colLeft">
 
 		<div id="archive-title">
-		Search results for "<?php /* Search Count */ $allsearch = &new WP_Query("s=$s&showposts=-1"); $key = wp_specialchars($s, 1); $count = $allsearch->post_count; _e(''); _e('<strong>'); echo $key; _e('</strong>'); wp_reset_query(); ?>"
+		Search results for "<?php /* Search Count */ $allsearch = &new WP_Query("s=$s&showposts=-1"); $key = wp_specialchars($s, 1); $count = $allsearch->post_count; echo '<strong>'.$key.'</strong>'; wp_reset_query(); ?>"
 		</div>
 						
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

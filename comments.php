@@ -36,7 +36,7 @@
 
 <div id="respond">
 
-<h2 id="commentsForm"><?php comment_form_title( 'Leave a comment', 'Leave a comment to %s' ); ?></h2>
+<h2 id="commentsForm"><?php comment_form_title( __('Leave a comment'), __('Leave a comment to %s') ); ?></h2>
 
 <div class="cancel-comment-reply">
 	<small><?php cancel_comment_reply_link(); ?></small>
@@ -58,7 +58,7 @@
 <input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
 </p>
 
-<p><label for="email"><?php _e("Mail (will not be published)", "boldy"); ?> <?php if ($req) echo "(required)"; ?></label>
+<p><label for="email"><?php _e("E-mail (will not be published)", "boldy"); ?> <?php if ($req) echo "(required)"; ?></label>
 <input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
 </p>
 

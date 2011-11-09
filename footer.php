@@ -36,15 +36,15 @@
 					} ?>">
 				</script>
 				<div id="quickContact">
-				<p id="success" class="successmsg" style="display:none;"><?php _e("Your email has been sent! Thank you!", "boldy"); ?></p>
+				<p id="success" class="successmsg" style="display:none;"><?php _e("Your e-mail has been sent. Thank you!", "boldy"); ?></p>
 
-				<p id="bademail" class="errormsg" style="display:none;"><?php _e("Please enter your name, a message and a valid email address.", "boldy"); ?></p>
-				<p id="badserver" class="errormsg" style="display:none;"><?php _e("Your email failed. Try again later.", "boldy"); ?></p>
+				<p id="bademail" class="errormsg" style="display:none;"><?php _e("Please enter your name, a message and a valid e-mail address.", "boldy"); ?></p>
+				<p id="badserver" class="errormsg" style="display:none;"><?php _e("Your e-mail failed. Try again later.", "boldy"); ?></p>
 					<form action="<?php bloginfo('template_url'); ?>/sendmail.php" method="post" id="quickContactForm">
 					<div class="leftSide">
 						<input type="text" value="<?php _e("Your name", "boldy"); ?>" id="quickName" name="name" />
-						<input type="text" value="<?php _e("Your email", "boldy"); ?>" id="quickEmail" name="email" />
-						<input type="submit" name="submit" id="submitinput" value="Send"/>
+						<input type="text" value="<?php _e("Your e-mail", "boldy"); ?>" id="quickEmail" name="email" />
+						<input type="submit" name="submit" id="submitinput" value="<?php _e("Send message", "boldy"); ?>"/>
 					</div>
 					<div class="rightSide">
 						<textarea id="quickComment" name="comment"><?php _e("Your message", "boldy"); ?></textarea>
@@ -70,7 +70,7 @@
 						}
                         else
                         {
-							_e("Just go to Theme Options Page and edit copyright text", "boldy");
+							_e("Just go to Theme options page and edit copyright text", "boldy");
 						}
                     ?> 
 					<!-- Pretty theme made in Site5: http://www.site5.com/ -->

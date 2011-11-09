@@ -30,20 +30,20 @@ Template Name: Contact
 			<h1>Contact Us</h1>
 			<p><?php echo stripslashes(stripslashes(get_option('boldy_contact_text')))?></p>
 			
-			<p id="success" class="successmsg" style="display:none;">Your email has been sent! Thank you!</p>
+			<p id="success" class="successmsg" style="display:none;"><?php _e("Your e-mail has been sent. Thank you!", "boldy"); ?></p>
 
-			<p id="bademail" class="errormsg" style="display:none;">Please enter your name, a message and a valid email address.</p>
-			<p id="badserver" class="errormsg" style="display:none;">Your email failed. Try again later.</p>
+			<p id="bademail" class="errormsg" style="display:none;"><?php _e("Please enter your name, a message and a valid e-mail address.", "boldy"); ?></p>
+			<p id="badserver" class="errormsg" style="display:none;"><?php _e("Your e-mail failed. Try again later.", "boldy"); ?></p>
 
 			<form id="contact" action="<?php bloginfo('template_url'); ?>/sendmail.php" method="post">
-			<label for="name">Your name: *</label>
+			<label for="name"><?php _e("Your name", "boldy"); ?>: *</label>
 				<input type="text" id="nameinput" name="name" value=""/>
-			<label for="email">Your email: *</label>
+			<label for="email"><?php _e("Your e-mail", "boldy"); ?>: *</label>
 
 				<input type="text" id="emailinput" name="email" value=""/>
-			<label for="comment">Your message: *</label>
+			<label for="comment"><?php _e("Your message", "boldy"); ?>: *</label>
 				<textarea cols="20" rows="7" id="commentinput" name="comment"></textarea><br />
-			<input type="submit" id="submitinput" name="submit" class="submit" value="SEND MESSAGE"/>
+			<input type="submit" id="submitinput" name="submit" class="submit" value="<?php _e("Send message", "boldy"); ?>"/>
 			<input type="hidden" id="receiver" name="receiver" value="<?php echo strhex(get_option('boldy_contact_email')); ?>"/>
 			</form>
 			

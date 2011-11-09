@@ -36,7 +36,7 @@
 				<div class="meta">
 					<?php the_time('M j, Y') ?> &nbsp;&nbsp;//&nbsp;&nbsp; <?php _e("by", "boldy"); ?> <span class="author"><?php the_author_link(); ?></span> &nbsp;&nbsp;//&nbsp;&nbsp;  <?php the_category(', ') ?>  &nbsp;//&nbsp;  <?php comments_popup_link('No Comments', '1 Comment ', '% Comments'); ?> 
 				</div>
-				<?php the_content(__('Read more >>')); ?> 
+				<?php the_content(__('Read more').'&raquo;'); ?>
 				
 		</div>
 		
