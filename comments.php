@@ -14,7 +14,9 @@
 <!-- You can start editing here. -->
 
 <?php if ( have_comments() ) : ?>
-    <h2 class="h2comments"><?php comments_number('No Comments', '1 Comment', '% Comments' );?></h2>
+    <h2 class="h2comments">
+        <?php comments_number(__('No comments', 'boldy-plus'), __('1 comment', 'boldy-plus'), __('% comments', 'boldy-plus'));?>
+    </h2>
 
     <ul class="commentlist">
     <?php wp_list_comments('callback=mytheme_comment'); ?>
