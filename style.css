@@ -880,6 +880,7 @@ line-height:140%;
 #topSearch input[type="text"] {
     -moz-border-radius:4px; 
     -webkit-border-radius:4px;
+    border-radius:4xp;
     width:100px;
     background:url(images/bk_top_search.png) 0 0 repeat-x;
     padding:9px 10px 10px;
@@ -902,7 +903,7 @@ line-height:140%;
 }    
 
 
-/* COMMENTS F0RM */
+/* Comments */
 
 #commentform p {
     margin:0;
@@ -920,6 +921,7 @@ line-height:140%;
     margin-bottom:10px;
    -moz-border-radius:4px;
    -webkit-border-radius:4px;
+   border-radius:4px;
 }
 
 #commentform input:focus, #commentform textarea:focus {

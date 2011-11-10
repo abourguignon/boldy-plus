@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Boldy+ in french\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-10 12:43+0100\n"
-"PO-Revision-Date: 2011-11-10 12:44+0100\n"
+"POT-Creation-Date: 2011-11-10 13:11+0100\n"
+"PO-Revision-Date: 2011-11-10 13:12+0100\n"
 "Last-Translator: Antonin Bourguignon <antonin.bourguignon@gmail.com>\n"
 "Language-Team: \n"
 "Language: \n"
@@ -50,6 +50,7 @@ msgid "Your message"
 msgstr "Votre message"
 
 #: /var/www/boldy-plus/contact.php:44
+#: /var/www/boldy-plus/comments.php:79
 #: /var/www/boldy-plus/footer.php:47
 msgid "Send"
 msgstr "Envoyer"
@@ -121,37 +122,41 @@ msgstr "Menu principal"
 msgid "Pages"
 msgstr "Pages"
 
-#: /var/www/boldy-plus/functions.php:308
-msgid "Edit"
-msgstr "Éditer"
+#: /var/www/boldy-plus/functions.php:310
+msgid "edit"
+msgstr "modifier"
 
-#: /var/www/boldy-plus/functions.php:308
+#: /var/www/boldy-plus/functions.php:312
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: /var/www/boldy-plus/functions.php:317
+#: /var/www/boldy-plus/functions.php:321
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: /var/www/boldy-plus/functions.php:376
-#: /var/www/boldy-plus/functions.php:377
+#: /var/www/boldy-plus/functions.php:380
+#: /var/www/boldy-plus/functions.php:381
 msgid "Boldy options"
 msgstr "Boldy options"
 
-#: /var/www/boldy-plus/functions.php:462
-#: /var/www/boldy-plus/functions.php:468
-#: /var/www/boldy-plus/functions.php:537
-#: /var/www/boldy-plus/functions.php:566
-#: /var/www/boldy-plus/functions.php:578
-#: /var/www/boldy-plus/functions.php:590
-#: /var/www/boldy-plus/functions.php:632
+#: /var/www/boldy-plus/functions.php:466
+#: /var/www/boldy-plus/functions.php:472
+#: /var/www/boldy-plus/functions.php:541
+#: /var/www/boldy-plus/functions.php:570
+#: /var/www/boldy-plus/functions.php:582
+#: /var/www/boldy-plus/functions.php:594
+#: /var/www/boldy-plus/functions.php:636
 msgid "Select"
 msgstr "Sélectionner"
 
 #: /var/www/boldy-plus/page.php:11
 msgid "Sorry, no posts matched your criteria."
 msgstr "Désolé, aucun post ne correspond à vos critères."
+
+#: /var/www/boldy-plus/comments.php:5
+msgid "Please do not load this page directly. Thanks!"
+msgstr "Merci de ne pas accéder à cette page directement."
 
 #: /var/www/boldy-plus/comments.php:8
 msgid "This post is password protected. Enter the password to view comments."
@@ -169,6 +174,10 @@ msgstr "Laisser un commentaire"
 #, php-format
 msgid "Leave a comment to %s"
 msgstr "Laisser un commentaire à %s"
+
+#: /var/www/boldy-plus/comments.php:55
+msgid "Log out"
+msgstr "Log out"
 
 #: /var/www/boldy-plus/comments.php:59
 msgid "Name"
@@ -217,6 +226,9 @@ msgstr "Suivez-nous !"
 #: /var/www/boldy-plus/footer.php:73
 msgid "Just go to Theme options page and edit copyright text"
 msgstr "Rendez-vous simplement sur la page d'options du thème et modifier le texte du copyright"
+
+#~ msgid "Edit"
+#~ msgstr "Éditer"
 
 #~ msgid "Send message"
 #~ msgstr "Envoyer votre message"
