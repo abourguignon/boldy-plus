@@ -628,7 +628,7 @@ blockquote {
     position:absolute;
     right:0;
     top:25px;
-    width:46px;
+    width:auto;
     height:21px;
     text-align:center;
     font-size:12px;
@@ -636,7 +636,7 @@ blockquote {
 
 #content #colLeft ul.commentlist .reply a {
     display:block;
-    width:46px;
+    width:auto;
     height:21px;
     font-style:italic;
 }
