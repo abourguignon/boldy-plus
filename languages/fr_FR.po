@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Boldy+ in french\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-09 14:15+0100\n"
-"PO-Revision-Date: 2011-11-09 14:15+0100\n"
+"POT-Creation-Date: 2011-11-10 12:43+0100\n"
+"PO-Revision-Date: 2011-11-10 12:44+0100\n"
 "Last-Translator: Antonin Bourguignon <antonin.bourguignon@gmail.com>\n"
 "Language-Team: \n"
 "Language: \n"
@@ -54,38 +54,62 @@ msgstr "Votre message"
 msgid "Send"
 msgstr "Envoyer"
 
-#: /var/www/boldy-plus/index.php:10
+#: /var/www/boldy-plus/index.php:11
 msgid "Browsing articles from"
 msgstr "Parcourir les articles à partir de"
 
-#: /var/www/boldy-plus/index.php:15
+#: /var/www/boldy-plus/index.php:16
 msgid "Browsing articles in"
 msgstr "Parcourir les articles dans"
 
-#: /var/www/boldy-plus/index.php:20
+#: /var/www/boldy-plus/index.php:21
 msgid "Browsing articles tagged with"
 msgstr "Parcourir les articles taggés avec "
 
-#: /var/www/boldy-plus/index.php:25
+#: /var/www/boldy-plus/index.php:26
 msgid "Browsing articles by"
 msgstr "Parcourir les articles par"
 
-#: /var/www/boldy-plus/index.php:37
-#: /var/www/boldy-plus/single.php:9
+#: /var/www/boldy-plus/index.php:39
+#: /var/www/boldy-plus/home.php:64
+#: /var/www/boldy-plus/search.php:17
+#: /var/www/boldy-plus/single.php:10
 msgid "by"
 msgstr "par"
 
-#: /var/www/boldy-plus/index.php:39
+#: /var/www/boldy-plus/index.php:42
+#: /var/www/boldy-plus/comments.php:18
+#: /var/www/boldy-plus/search.php:20
+#: /var/www/boldy-plus/single.php:13
+msgid "No comments"
+msgstr "Aucun commentaire"
+
+#: /var/www/boldy-plus/index.php:42
+#: /var/www/boldy-plus/comments.php:18
+#: /var/www/boldy-plus/search.php:20
+#: /var/www/boldy-plus/single.php:13
+msgid "1 comment"
+msgstr "1 commentaire"
+
+#: /var/www/boldy-plus/index.php:42
+#: /var/www/boldy-plus/comments.php:18
+#: /var/www/boldy-plus/search.php:20
+#: /var/www/boldy-plus/single.php:13
+#, php-format
+msgid "% comments"
+msgstr "% commentaires"
+
+#: /var/www/boldy-plus/index.php:44
 #: /var/www/boldy-plus/home.php:73
 #: /var/www/boldy-plus/home.php:103
 #: /var/www/boldy-plus/home.php:113
 #: /var/www/boldy-plus/home.php:123
-#: /var/www/boldy-plus/single.php:11
+#: /var/www/boldy-plus/single.php:15
 msgid "Read more"
 msgstr "Lire la suite"
 
-#: /var/www/boldy-plus/index.php:49
-#: /var/www/boldy-plus/single.php:37
+#: /var/www/boldy-plus/index.php:54
+#: /var/www/boldy-plus/single.php:41
 msgid "Sorry, but you are looking for something that isn't here."
 msgstr "Désolé, ce que vous cherchez ne se trouve pas ici."
 
@@ -133,52 +157,52 @@ msgstr "Désolé, aucun post ne correspond à vos critères."
 msgid "This post is password protected. Enter the password to view comments."
 msgstr "Ce post est protégé par mot de passe.  Entrez le mot de passe afin de voir les commentaires."
 
-#: /var/www/boldy-plus/comments.php:29
+#: /var/www/boldy-plus/comments.php:31
 msgid "Comments are closed."
 msgstr "Les commentaires sont fermés."
 
-#: /var/www/boldy-plus/comments.php:39
+#: /var/www/boldy-plus/comments.php:41
 msgid "Leave a comment"
 msgstr "Laisser un commentaire"
 
-#: /var/www/boldy-plus/comments.php:39
+#: /var/www/boldy-plus/comments.php:41
 #, php-format
 msgid "Leave a comment to %s"
 msgstr "Laisser un commentaire à %s"
 
-#: /var/www/boldy-plus/comments.php:57
+#: /var/www/boldy-plus/comments.php:59
 msgid "Name"
 msgstr "Nom"
 
-#: /var/www/boldy-plus/comments.php:61
+#: /var/www/boldy-plus/comments.php:63
 msgid "E-mail (will not be published)"
 msgstr "E-mail (ne sera pas publié)"
 
-#: /var/www/boldy-plus/comments.php:65
+#: /var/www/boldy-plus/comments.php:67
 msgid "Website"
 msgstr "Site Web"
 
-#: /var/www/boldy-plus/comments.php:73
+#: /var/www/boldy-plus/comments.php:75
 msgid "Comment"
 msgstr "Commentaire"
 
-#: /var/www/boldy-plus/single.php:19
+#: /var/www/boldy-plus/single.php:23
 msgid "Tweet this!"
 msgstr ""
 
-#: /var/www/boldy-plus/single.php:21
+#: /var/www/boldy-plus/single.php:25
 msgid "StumbleUpon"
 msgstr ""
 
-#: /var/www/boldy-plus/single.php:23
+#: /var/www/boldy-plus/single.php:27
 msgid "Digg this!"
 msgstr ""
 
-#: /var/www/boldy-plus/single.php:25
+#: /var/www/boldy-plus/single.php:29
 msgid "Bookmark on Delicious"
 msgstr ""
 
-#: /var/www/boldy-plus/single.php:27
+#: /var/www/boldy-plus/single.php:31
 msgid "Share on Facebook"
 msgstr "Partager sur facebook"
 
