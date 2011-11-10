@@ -61,7 +61,7 @@
                         <h2><?php the_title(); ?></h2>
                     
                         <div class="meta">
-                        <?php the_time('h\hm') ?> &nbsp;&nbsp;//&nbsp;&nbsp; by <span class="author"><?php the_author_link(); ?></span>
+                        <?php the_time('h\hm') ?> &nbsp;&nbsp;//&nbsp;&nbsp; <?php _e('by', 'boldy-plus'); ?> <span class="author"><?php the_author_link(); ?></span>
                         </div>
                     
                         <?php if (has_post_thumbnail()) : ?>
