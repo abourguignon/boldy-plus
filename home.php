@@ -59,16 +59,19 @@
                     ?>
                     <div class="homeBox<?php if ($boxNumber == 3) : ?> last<?php endif; ?>">
                         <h2><?php the_title(); ?></h2>
-                    
+                        
                         <div class="meta">
                         <?php the_time('h\hm') ?> &nbsp;&nbsp;//&nbsp;&nbsp; <?php _e('by', 'boldy-plus'); ?> <span class="author"><?php the_author_link(); ?></span>
                         </div>
-                    
+                        
                         <?php if (has_post_thumbnail()) : ?>
                         <p>
-                            <?php the_post_thumbnail(); ?>
+                            <a class="more-link" href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail(); ?>
+                            </a>
                         </p>
                         <?php endif; ?>
+                        
                         <?php the_excerpt(); ?>
                         <a class="more-link" href="<?php the_permalink(); ?>"><?php _e("Read more", "boldy-plus"); ?> &raquo;</a>
                     </div>
@@ -84,9 +87,9 @@
         
         <!-- begin home boxes -->
         <?php 
-        $box1=get_post(get_option('boldy_home_box1'));
-        $box2=get_post(get_option('boldy_home_box2'));
-        $box3=get_post(get_option('boldy_home_box3'));
+        $box1 = get_post(get_option('boldy_home_box1'));
+        $box2 = get_post(get_option('boldy_home_box2'));
+        $box3 = get_post(get_option('boldy_home_box3'));
         ?>
         
         <?php if(get_option('boldy_home_box1')!= null && get_option('boldy_home_box2')!= null && get_option('boldy_home_box3')!= null) : ?>
@@ -96,7 +99,9 @@
                 
                 <?php if (has_post_thumbnail($box1->ID)) : ?>
                 <p>
-                    <?php echo get_the_post_thumbnail($box1->ID); ?>
+                    <a href="<?php echo get_option('boldy_home_box1_link')?>">
+                        <?php echo get_the_post_thumbnail($box1->ID); ?>
+                    </a>
                 </p>
                 <?php endif; ?>
                 <?php echo apply_filters('the_content', $box1->post_excerpt);?>
@@ -106,7 +111,9 @@
                 <h2><?php echo $box2->post_title?></h2>
                 <?php if (has_post_thumbnail($box2->ID)) : ?>
                     <p>
-                        <?php echo get_the_post_thumbnail($box2->ID); ?>
+                        <a href="<?php echo get_option('boldy_home_box2_link')?>">
+                            <?php echo get_the_post_thumbnail($box2->ID); ?>
+                        </a>
                     </p>
                 <?php endif; ?>
                 <?php echo apply_filters('the_content', $box2->post_excerpt);?>
@@ -116,7 +123,9 @@
                 <h2><?php echo $box3->post_title?></h2>
                 <?php if (has_post_thumbnail($box3->ID)) : ?>
                     <p>
-                        <?php echo get_the_post_thumbnail($box3->ID); ?>
+                        <a href="<?php echo get_option('boldy_home_box3_link')?>">
+                            <?php echo get_the_post_thumbnail($box3->ID); ?>
+                        </a>
                     </p>
                 <?php endif; ?>
                 <?php echo apply_filters('the_content', $box3->post_excerpt);?>
