@@ -70,7 +70,7 @@
                         </p>
                         <?php endif; ?>
                         <?php the_excerpt(); ?>
-                        <a class="more-link" href="<?php the_permalink(); ?>"><?php _e("Read more", "boldy"); ?> &raquo;</a>
+                        <a class="more-link" href="<?php the_permalink(); ?>"><?php _e("Read more", "boldy-plus"); ?> &raquo;</a>
                     </div>
                     <?php
                 }
@@ -100,7 +100,7 @@
                 </p>
                 <?php endif; ?>
                 <?php echo apply_filters('the_content', $box1->post_excerpt);?>
-                <a class="more-link" href="<?php echo get_option('boldy_home_box1_link')?>"><?php _e("Read more", "boldy"); ?> &raquo;</a>
+                <a class="more-link" href="<?php echo get_option('boldy_home_box1_link')?>"><?php _e("Read more", "boldy-plus"); ?> &raquo;</a>
             </div>
             <div class="homeBox">
                 <h2><?php echo $box2->post_title?></h2>
@@ -110,7 +110,7 @@
                     </p>
                 <?php endif; ?>
                 <?php echo apply_filters('the_content', $box2->post_excerpt);?>
-                <a class="more-link" href="<?php echo get_option('boldy_home_box2_link')?>"><?php _e("Read more", "boldy"); ?> &raquo;</a>
+                <a class="more-link" href="<?php echo get_option('boldy_home_box2_link')?>"><?php _e("Read more", "boldy-plus"); ?> &raquo;</a>
             </div>
             <div class="homeBox last">
                 <h2><?php echo $box3->post_title?></h2>
@@ -120,7 +120,7 @@
                     </p>
                 <?php endif; ?>
                 <?php echo apply_filters('the_content', $box3->post_excerpt);?>
-                <a class="more-link" href="<?php echo get_option('boldy_home_box3_link')?>"><?php _e("Read more", "boldy"); ?> &raquo;</a>
+                <a class="more-link" href="<?php echo get_option('boldy_home_box3_link')?>"><?php _e("Read more", "boldy-plus"); ?> &raquo;</a>
             </div>
         </div>
         <?php endif; ?>

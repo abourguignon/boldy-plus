@@ -5,7 +5,7 @@
         die ('Please do not load this page directly. Thanks!');
 
     if ( post_password_required() ) { ?>
-        <p class="nocomments"><?php _e("This post is password protected. Enter the password to view comments.", "boldy"); ?></p>
+        <p class="nocomments"><?php _e("This post is password protected. Enter the password to view comments.", "boldy-plus"); ?></p>
     <?php
         return;
     }
@@ -26,7 +26,7 @@
 
      <?php else : // comments are closed ?>
         <!-- If comments are closed. -->
-        <p class="nocomments"><?php _e("Comments are closed.", "boldy"); ?></p>
+        <p class="nocomments"><?php _e("Comments are closed.", "boldy-plus"); ?></p>
 
     <?php endif; ?>
 <?php endif; ?>
@@ -54,15 +54,15 @@
 
 <?php else : ?>
 
-<p><label for="author"><?php _e("Name", "boldy"); ?> <?php if ($req) echo "(required)"; ?></label>
+<p><label for="author"><?php _e("Name", "boldy-plus"); ?> <?php if ($req) echo "(required)"; ?></label>
 <input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
 </p>
 
-<p><label for="email"><?php _e("E-mail (will not be published)", "boldy"); ?> <?php if ($req) echo "(required)"; ?></label>
+<p><label for="email"><?php _e("E-mail (will not be published)", "boldy-plus"); ?> <?php if ($req) echo "(required)"; ?></label>
 <input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
 </p>
 
-<p><label for="url"><?php _e("Website", "boldy"); ?></label>
+<p><label for="url"><?php _e("Website", "boldy-plus"); ?></label>
 <input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
 </p>
 
@@ -70,7 +70,7 @@
 
 <!--<p><small><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></small></p>-->
 
-<p><label for="comment"><?php _e("Comment", "boldy"); ?></label>
+<p><label for="comment"><?php _e("Comment", "boldy-plus"); ?></label>
 <textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
 
 <p><input name="submit" type="submit" id="submit" tabindex="5" value="POST COMMENT" />

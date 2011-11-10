@@ -29,19 +29,19 @@ $(document).ready(function(){
         <h1>Contact Us</h1>
         <p><?php echo stripslashes(stripslashes(get_option('boldy_contact_text')))?></p>
 
-        <p id="success" class="successmsg" style="display:none;"><?php _e("Your e-mail has been sent. Thank you!", "boldy"); ?></p>
-        <p id="bademail" class="errormsg" style="display:none;"><?php _e("Please enter your name, a message and a valid e-mail address.", "boldy"); ?></p>
-        <p id="badserver" class="errormsg" style="display:none;"><?php _e("Your e-mail failed. Try again later.", "boldy"); ?></p>
+        <p id="success" class="successmsg" style="display:none;"><?php _e("Your e-mail has been sent. Thank you!", "boldy-plus"); ?></p>
+        <p id="bademail" class="errormsg" style="display:none;"><?php _e("Please enter your name, a message and a valid e-mail address.", "boldy-plus"); ?></p>
+        <p id="badserver" class="errormsg" style="display:none;"><?php _e("Your e-mail failed. Try again later.", "boldy-plus"); ?></p>
 
         <form id="contact" action="<?php bloginfo('template_url'); ?>/sendmail.php" method="post">
-        <label for="name"><?php _e("Your name", "boldy"); ?>: *</label>
+        <label for="name"><?php _e("Your name", "boldy-plus"); ?>: *</label>
             <input type="text" id="nameinput" name="name" value=""/>
-        <label for="email"><?php _e("Your e-mail", "boldy"); ?>: *</label>
+        <label for="email"><?php _e("Your e-mail", "boldy-plus"); ?>: *</label>
 
             <input type="text" id="emailinput" name="email" value=""/>
-        <label for="comment"><?php _e("Your message", "boldy"); ?>: *</label>
+        <label for="comment"><?php _e("Your message", "boldy-plus"); ?>: *</label>
             <textarea cols="20" rows="7" id="commentinput" name="comment"></textarea><br />
-        <input type="submit" id="submitinput" name="submit" class="submit" value="<?php _e("Send", "boldy"); ?>"/>
+        <input type="submit" id="submitinput" name="submit" class="submit" value="<?php _e("Send", "boldy-plus"); ?>"/>
         <input type="hidden" id="receiver" name="receiver" value="<?php echo strhex(get_option('boldy_contact_email')); ?>"/>
         </form>
     </div>

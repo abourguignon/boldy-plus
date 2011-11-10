@@ -7,7 +7,7 @@
 add_action('after_setup_theme', 'boldy_i18n');
         
 function boldy_i18n() {
-    load_theme_textdomain('boldy', get_template_directory() . '/languages');
+    load_theme_textdomain('boldy-plus', get_template_directory() . '/languages');
 }
 
 
