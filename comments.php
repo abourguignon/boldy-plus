@@ -2,7 +2,7 @@
 
 // Do not delete these lines
     if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
-        die ('Please do not load this page directly. Thanks!');
+        die (__('Please do not load this page directly. Thanks!'));
 
     if ( post_password_required() ) { ?>
         <p class="nocomments"><?php _e("This post is password protected. Enter the password to view comments.", "boldy-plus"); ?></p>
@@ -52,7 +52,7 @@
 
 <?php if ( $user_ID ) : ?>
 
-<p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">Log out &raquo;</a></p>
+<p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a> (<a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account"><?php _e('Log out', 'boldy-plus'); ?></a>)</p>
 
 <?php else : ?>
 
@@ -75,8 +75,9 @@
 <p><label for="comment"><?php _e("Comment", "boldy-plus"); ?></label>
 <textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
 
-<p><input name="submit" type="submit" id="submit" tabindex="5" value="POST COMMENT" />
-<?php comment_id_fields(); ?>
+<p>
+    <input name="submit" type="submit" id="submit" tabindex="5" value="<?php _e('Send', 'boldy-plus'); ?>" />
+    <?php comment_id_fields(); ?>
 </p>
 <?php do_action('comment_form', $post->ID); ?>
 

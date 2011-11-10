@@ -297,32 +297,36 @@ function post_is_in_descendant_category( $cats, $_post = null )
 ********************************/
 
 function mytheme_comment($comment, $args, $depth) {
-   $GLOBALS['comment'] = $comment; ?>
-   <li <?php comment_class('clearfix'); ?> id="li-comment-<?php comment_ID() ?>">
-       <div class="gravatar">
-     <?php echo get_avatar($comment,$size='50',$default='http://www.gravatar.com/avatar/61a58ec1c1fba116f8424035089b7c71?s=32&d=&r=G' ); ?>
-     <div class="gravatar_mask"></div>
-    </div>
-     <div id="comment-<?php comment_ID(); ?>">
-      <div class="comment-meta commentmetadata clearfix">
-        <strong><?php printf('%s', get_comment_author_link()) ?></strong> (<?php edit_comment_link(__('Edit')) ?>) <span><?php printf(__('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?>
-      </span>
-      </div>
-      
-      <div class="text">
-          <?php comment_text() ?>
-      </div>
-      
-      <?php if ($comment->comment_approved == '0') : ?>
-         <em><?php _e('Your comment is awaiting moderation.') ?></em>
-         <br />
-      <?php endif; ?>
-
-      <div class="reply">
-         <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-      </div>
-     </div>
-<?php }
+    $GLOBALS['comment'] = $comment; 
+    ?>
+    <li <?php comment_class('clearfix'); ?> id="li-comment-<?php comment_ID() ?>">
+        <div class="gravatar">
+            <?php echo get_avatar($comment,$size='50',$default='http://www.gravatar.com/avatar/61a58ec1c1fba116f8424035089b7c71?s=32&d=&r=G' ); ?>
+            <div class="gravatar_mask"></div>
+        </div>
+        <div id="comment-<?php comment_ID(); ?>">
+            <div class="comment-meta commentmetadata clearfix">
+                <strong><?php printf('%s', get_comment_author_link()) ?></strong> 
+                (<?php edit_comment_link(__('edit')) ?>) 
+                <span>
+                    <?php printf(__('%1$s at %2$s'), get_comment_date(),  get_comment_time('G\hi')); ?>
+                </span>
+            </div>
+            
+            <div class="text">
+                <?php comment_text() ?>
+            </div>
+            
+            <?php if ($comment->comment_approved == '0') : ?>
+            <em><?php _e('Your comment is awaiting moderation.') ?></em><br />
+            <?php endif; ?>
+            
+            <div class="reply">
+            <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+            </div>
+        </div>
+<?php 
+}
 
 
 /*******************************
@@ -369,9 +373,9 @@ function boldy_theme_page ()
         foreach ( $options as $opt )
         {
             delete_option ( 'boldy_'.$opt, $_POST[$opt] );
-            add_option ( 'boldy_'.$opt, $_POST[$opt] );    
-        }            
-         
+            add_option ( 'boldy_'.$opt, $_POST[$opt] );
+        }
+        
     }
     add_menu_page(__('Boldy options'), __('Boldy options'), 'edit_themes', basename(__FILE__), 'boldy_settings');
     add_submenu_page(__('Boldy options'), __('Boldy options'), 'edit_themes', basename(__FILE__), 'boldy_settings');
@@ -396,7 +400,7 @@ function boldy_settings()
 </style>
 
 <div class="wrap">
-    <h2>Boldy options panel</h2>
+<h2>Boldy options panel</h2>
     
 <form method="post" action="">
     
