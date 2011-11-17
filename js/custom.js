@@ -37,7 +37,6 @@ $('#s').blur(function() {
 });
 
 // QUICK CONTACT
-
 $('#quickName').focus(function() {
     $(this).val('');    
 });
