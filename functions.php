@@ -28,17 +28,22 @@ if ( function_exists( 'wp_nav_menu' ) )
     }
 }
 
-/* CallBack functions for menus in case of earlier than 3.0 Wordpress version or if no menu is set yet*/
-
+/* 
+ * CallBack functions for menus in case of earlier than 3.0 Wordpress version 
+ * or if no menu is set yet
+ */
 function primarymenu() { 
-?>
+    ?>
     <div id="mainMenu" class="ddsmoothmenu">
         <ul>
-            <?php wp_list_categories('hide_empty=1&title_li='); ?>
-            <?php wp_list_pages('title_li='); ?>
+            <?php 
+            wp_list_categories(
+                'hide_empty=1&title_li=<a href="#">'.__('News').'</a>'); 
+            wp_list_pages('title_li='); 
+            ?>
         </ul>
     </div>
-<?php 
+    <?php 
 }
 
 
@@ -61,7 +66,7 @@ function boldy_dropdown_pages($args = '') {
     
     $r = wp_parse_args( $args, $defaults );
     extract( $r, EXTR_SKIP );
-
+    
     // Super workaround to display private pages trololol
     $pages_publish = get_pages(array_merge($r, array('post_status' => 'publish')));
     $pages_private = get_pages(array_merge($r, array('post_status' => 'private')));
@@ -72,7 +77,7 @@ function boldy_dropdown_pages($args = '') {
     // Back-compat with old system where both id and name were based on $name argument
     if ( empty($id) )
         $id = $name;
-
+    
     if ( ! empty($pages) ) {
         $output = "<select name=\"$name\" id=\"$id\">\n";
         if ( $show_option_no_change )
@@ -82,12 +87,12 @@ function boldy_dropdown_pages($args = '') {
         $output .= walk_page_dropdown_tree($pages, $depth, $r);
         $output .= "</select>\n";
     }
-
+    
     $output = apply_filters('wp_dropdown_pages', $output);
-
+    
     if ( $echo )
         echo $output;
-
+    
     return $output;
 }
 
@@ -461,15 +466,9 @@ function boldy_settings()
             </td>
         </tr>
         <tr valign="top">
-            <th scope="row"><label for="b">Choose blog category</label></th>
-            <td>
-                <?php wp_dropdown_categories("name=blog&hide_empty=0&show_option_none=- ".__('Select')." -&selected=" .get_option('boldy_blog')); ?>
-            </td>
-        </tr>
-         <tr valign="top">
             <th scope="row"><label for="portfolio">Choose portfolio category</label></th>
             <td>
-                <?php wp_dropdown_categories("name=portfolio&hide_empty=0&show_option_none=- ".__('Select')." -&selected=" .get_option('boldy_portfolio')); ?>
+            <?php wp_dropdown_categories("name=portfolio&hide_empty=0&show_option_none=- ".__('Select')." -&selected=" .get_option('boldy_portfolio')); ?>
             </td>
         </tr>
     </table>
