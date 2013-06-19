@@ -11,6 +11,7 @@
     <link href="<?php bloginfo('template_directory'); ?>/css/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
     <link href="<?php bloginfo('template_directory'); ?>/css/prettyPhoto.css" rel="stylesheet" type="text/css" />
     <link href="<?php bloginfo('template_directory'); ?>/css/nivo-slider.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery-1.7.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.form.js"></script>
@@ -18,13 +19,7 @@
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.nivo.slider.pack.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.prettyPhoto.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/custom.js"></script>
-    <?php if (get_option('boldy_cufon') != "no") : ?>
-    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/cufon-yui.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/Museo_Slab_500_400.font.js"></script>
-    <script type="text/javascript">
-        Cufon.replace('h1',{hover: true})('h2',{hover: true})('h3')('.reply',{hover: true})('.more-link');
-    </script>
-    <?php endif; ?>
+
     <script type="text/javascript">
         $(document).ready(function(){
             $('#quickContactForm').ajaxForm(function(data){
