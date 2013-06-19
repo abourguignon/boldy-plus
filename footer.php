@@ -56,22 +56,19 @@
         <div id="footerWidgets">
             <div id="footerWidgetsInner">
                 <!-- BEGIN FOOTER WIDGET -->
-                <?php /* Widgetized sidebar */
-                if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('footer')): ?><?php endif; ?>
+                <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('footer')): ?><?php endif; ?>
                 <!-- END FOOTER WIDGETS -->
+
                 <!-- BEGIN COPYRIGHT -->
                 <div id="copyright">
                     <?php
-                        if (get_option('boldy_copyright') <> "")
-                        {
-                            echo stripslashes(stripslashes(get_option('boldy_copyright')));
-                        }
-                        else
-                        {
-                            _e("Just go to Theme options page and edit copyright text", "boldy-plus");
-                        }
+                    if (get_option('boldy_copyright') != "") {
+                        echo stripslashes(stripslashes(get_option('boldy_copyright')));
+                    }
+                    else {
+                        _e("Just go to Theme options page and edit copyright text", "boldy-plus");
+                    }
                     ?>
-                    <!-- Pretty theme made in Site5: http://www.site5.com/ -->
                 </div>
                 <!-- END COPYRIGHT -->
             </div>
@@ -81,10 +78,14 @@
     <!-- END FOOTER -->
 </div>
 <!-- END MAINWRAPPER -->
-<?php if (get_option(' boldy_analytics') <> ""): ?>
-<?php echo stripslashes(stripslashes(get_option('boldy_analytics'))); ?>
-<?php endif; ?>
 
-<?php wp_footer(); ?>
+<?php
+if (get_option('boldy_analytics') != "") {
+    echo stripslashes(stripslashes(get_option('boldy_analytics')));
+}
+
+wp_footer();
+?>
+
 </body>
 </html>
