@@ -129,22 +129,25 @@ add_filter('excerpt_length', 'home_excerpt_length');
  WIDGETS AREAS
 ********************************/
 
-if ( function_exists('register_sidebar') )
-register_sidebar(array(
-    'name' => 'sidebar',
-    'before_widget' => '<div class="rightBox">',
-    'after_widget' => '</div>',
-    'before_title' => '<h2>',
-    'after_title' => '</h2>',
-));
+if (function_exists('register_sidebar')) {
+    register_sidebar(array(
+        'id' => 'sidebar',
+        'name' => __('Sidebar', 'boldy-plus'),
+        'before_widget' => '<div class="rightBox">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2>',
+        'after_title' => '</h2>',
+    ));
 
-register_sidebar(array(
-    'name' => 'footer',
-    'before_widget' => '<div class="boxFooter">',
-    'after_widget' => '</div>',
-    'before_title' => '<h2>',
-    'after_title' => '</h2>',
-));
+    register_sidebar(array(
+        'id' => 'footer',
+        'name' => __('Footer', 'boldy-plus'),
+        'before_widget' => '<div class="boxFooter">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2>',
+        'after_title' => '</h2>',
+    ));
+}
 
 
 /*******************************
