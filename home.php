@@ -2,7 +2,7 @@
 
 <!-- BEGIN SLIDER -->
 <div id="slider">
-    <?php 
+    <?php
     if (get_option('boldy_slider') != "") {
         $page_data = get_page(get_option('boldy_slider'));
         $content = $page_data->post_content;
@@ -10,16 +10,16 @@
     }
     else {
     ?>
-    
-    <div style="border:1px solid #ddd; text-align:center; padding:150px 100px 0; height:219px; font-size:14px;">
-        This is the slider. In order to have items here you need to 
-        create a page in which to insert the images, simply one after 
-        another, setting up the link to point at ( if needed ) and 
-        text captions in the Title field. Then select the page as the 
-        "slider page" in the Theme Options Page. Make sure your images 
-        are 960px x 370px.
+
+    <div style="border:1px solid #ddd; text-align:center; padding:150px 100px 0; height:219px; font-size:14px; background: #fff;">
+        <?php _e("This is the slider. In order to have items here you need to
+        create a page in which to insert the images, simply one after
+        another, setting up the link to point at ( if needed ) and
+        text captions in the Title field. Then select the page as the
+        \"slider page\" in the Theme Options Page. Make sure your images
+        are 960px x 370px.", "boldy-plus"); ?>
     </div>
-    <?php 
+    <?php
     }
     ?>
 </div>
@@ -30,17 +30,17 @@
 <?php if (get_option('boldy_blurb_enable') == "yes" && get_option('boldy_blurb_text') != "") : ?>
 <div id="blurb">
     <p>
-        <a href="<?php 
-        if(get_option('boldy_blurb_page') != "") {
+        <a href="<?php
+        if (get_option('boldy_blurb_page') != "") {
             echo get_permalink(get_option('boldy_blurb_page'));
         }
         elseif (get_option('boldy_blurb_link') != "") {
             echo get_option('boldy_blurb_link');
-        } 
+        }
         ?>">
             <img src="<?php bloginfo('template_directory'); ?>/images/but_blurb.png" alt="Blurb" />
         </a>
-        <?php echo get_option('boldy_blurb_text'); ?> 
+        <?php echo get_option('boldy_blurb_text'); ?>
     </p>
 </div>
 <?php endif; ?>
@@ -48,34 +48,32 @@
 
 <!-- BEGIN HOME CONTENT -->
 <!-- begin home news -->
-<?php 
-if (get_option('boldy_home_news_boxes') == 'yes')
-{
+<?php
+if (get_option('boldy_home_news_boxes') == 'yes') {
     query_posts('posts_per_page=3');
-    if (have_posts()) 
-    {
+
+    if (have_posts())     {
         ?>
         <div id="homeBoxes" class="clearfix">
         <?php
         $boxNumber = 0;
-        while (have_posts())
-        {
+        while (have_posts()) {
             $boxNumber++;
             the_post();
             ?>
             <div class="homeBox<?php if ($boxNumber == 3) : ?> last<?php endif; ?>">
                 <h2><?php the_title(); ?></h2>
-                
+
                 <div class="meta">
-                <?php the_time('h\hm') ?> &nbsp;&nbsp;//&nbsp;&nbsp; <?php _e('by', 'boldy-plus'); ?> <span class="author"><?php the_author_link(); ?></span>
+                <?php the_time('h\hm'); ?> &nbsp;&nbsp;//&nbsp;&nbsp; <?php _e('by', 'boldy-plus'); ?> <span class="author"><?php the_author_link(); ?></span>
                 </div>
-                
+
                 <?php if (has_post_thumbnail()) : ?>
                 <p>
                     <?php the_post_thumbnail(); ?>
                 </p>
                 <?php endif; ?>
-                
+
                 <?php the_excerpt(); ?>
                 <a class="more-link" href="<?php the_permalink(); ?>">
                     <?php _e("Read more", "boldy-plus"); ?> &raquo;
@@ -92,7 +90,7 @@ if (get_option('boldy_home_news_boxes') == 'yes')
 <!-- end home news -->
 
 <!-- begin home boxes -->
-<?php 
+<?php
 $box1=get_post(get_option('boldy_home_box1'));
 $box2=get_post(get_option('boldy_home_box2'));
 $box3=get_post(get_option('boldy_home_box3'));
