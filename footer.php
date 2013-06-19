@@ -5,7 +5,7 @@
 
     <!-- BEGIN FOOTER -->
     <div id="footer">
-        <?php if (get_option('boldy_footer_actions')!="no"): ?>
+        <?php if (get_option('boldy_footer_actions') != "no"): ?>
         <div style="width:960px; margin: 0 auto; position:relative;">
             <a href="#" id="showHide" <?php if(get_option('boldy_actions_hide')=="hidden"){echo 'style="background-position:0 -16px"';}?>>
                 <?php _e("Show/Hide footer actions", "boldy-plus"); ?>
@@ -14,7 +14,7 @@
 
         <div id="footerActions" <?php if(get_option('boldy_actions_hide')=="hidden"){echo 'style="display:none"';}?>>
             <div id="footerActionsInner">
-                <?php if (get_option('boldy_twitter_user')!="" && get_option('boldy_latest_tweet')!="no"): ?>
+                <?php if (get_option('boldy_twitter_user') != "" && get_option('boldy_latest_tweet') != "no"): ?>
                 <div id="twitter">
                     <a href="http://twitter.com/<?php echo get_option('boldy_twitter_user'); ?>" class="action">
                         <?php _e("Follow us!", "boldy-plus"); ?>
@@ -26,12 +26,12 @@
                         <div id="tweetBottom"></div>
                     </div>
                 </div>
-                <?php endif; ?>
                 <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
                 <script
                     type="text/javascript"
                     src="http://twitter.com/statuses/user_timeline/<?php echo get_option('boldy_twitter_user'); ?>.json?callback=twitterCallback2&amp;count=<?php echo (get_option('boldy_number_tweets')!="" ? get_option('boldy_number_tweets') : "1"); ?>">
                 </script>
+                <?php endif; ?>
                 <div id="quickContact">
                     <p id="success" class="successmsg" style="display:none;"><?php _e("Your e-mail has been sent. Thank you!", "boldy-plus"); ?></p>
                     <p id="bademail" class="errormsg" style="display:none;"><?php _e("Please enter your name, a message and a valid e-mail address.", "boldy-plus"); ?></p>
