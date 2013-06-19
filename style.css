@@ -485,6 +485,18 @@ blockquote {
     z-index:10;
 }
 
+#slider .example-slice {
+    height:100%;
+    border:1px solid #ddd;
+    background: #fff;
+}
+#slider .example-slice p {
+    width: 80%;
+    margin: 170px auto 0;
+    font-size:14px;
+    text-align: justify;
+}
+
 
 /* PORTFOLIO PAGE
 ---------------------------------------*/

@@ -11,13 +11,15 @@
     else {
     ?>
 
-    <div style="border:1px solid #ddd; text-align:center; padding:150px 100px 0; height:219px; font-size:14px; background: #fff;">
-        <?php _e("This is the slider. In order to have items here you need to
-        create a page in which to insert the images, simply one after
-        another, setting up the link to point at ( if needed ) and
-        text captions in the Title field. Then select the page as the
-        \"slider page\" in the Theme Options Page. Make sure your images
-        are 960px x 370px.", "boldy-plus"); ?>
+    <div class="example-slice">
+        <p>
+            <?php _e("This is the slider. In order to have items here you need to
+            create a page in which to insert the images, simply one after
+            another, setting up the link to point at (if necessary) and
+            text captions in the Title field. Then select the page as the
+            \"slider page\" in the Theme Options Page. Make sure your images
+            are 960*370px.", "boldy-plus"); ?>
+        </p>
     </div>
     <?php
     }
