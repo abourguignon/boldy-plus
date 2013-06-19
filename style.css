@@ -106,7 +106,7 @@ body#home #content{
 
 body#home #content, body#portfolio #content {
     background:none;
-    
+
 }
 
 #content #colLeft {
@@ -119,7 +119,7 @@ body#home #content, body#portfolio #content {
 #content #colRight {
     float:left;
     width:240px;
-    
+
 }
 
 #footer {
@@ -127,7 +127,7 @@ body#home #content, body#portfolio #content {
     margin:10px 0 0;
     color:#666;
     position:relative;
-    padding-top:3px;    
+    padding-top:3px;
     font-size:12px;
 }
 
@@ -186,7 +186,7 @@ body#home #content, body#portfolio #content {
 }
 
 #mainMenu ul li a span {
-    font-size:10px;    
+    font-size:10px;
     color:#999;
     line-height:120%;
 }
@@ -308,13 +308,13 @@ body#home #content, body#portfolio #content {
 /* Home blurb */
 
 #blurb {
-    -moz-border-radius:8px; 
+    -moz-border-radius:8px;
     -webkit-border-radius:8px;
-    border-top:1px solid #BDBDBD; 
-    border-left:1px solid #BDBDBD; 
-    border-bottom:1px solid #fff; 
+    border-top:1px solid #BDBDBD;
+    border-left:1px solid #BDBDBD;
+    border-bottom:1px solid #fff;
     border-right:1px solid #fff;
-    padding:15px 20px 25px;  
+    padding:15px 20px 25px;
     text-shadow:1px 1px #fff;
     background:url(images/bk_blurb.jpg) 0 100% repeat-x;
     font-size:18px;
@@ -341,9 +341,9 @@ body#home #content, body#portfolio #content {
 }
 
 #content #colLeft img {
-    border-top:1px solid #BBB; 
-    border-left:1px solid #BBB; 
-    border-bottom:1px solid #fff; 
+    border-top:1px solid #BBB;
+    border-left:1px solid #BBB;
+    border-bottom:1px solid #fff;
     border-right:1px solid #fff;
 }
 
@@ -366,7 +366,7 @@ body#home #content, body#portfolio #content {
 }
 
 .postTags {
-    font-size:13px;    
+    font-size:13px;
     background:url(images/ico_tag.png) 0 50% no-repeat;
     padding-left:24px;
     margin:25px 0 0;
@@ -407,11 +407,11 @@ blockquote {
     font-size:12px;
     line-height:32px;
     padding:0 10px;
-    -moz-border-radius:8px; 
+    -moz-border-radius:8px;
     -webkit-border-radius:8px;
-    border:1px solid #008FF5; 
-    /*border-left:1px solid #008FF5; 
-    border-bottom:1px solid #fff; 
+    border:1px solid #008FF5;
+    /*border-left:1px solid #008FF5;
+    border-bottom:1px solid #fff;
     border-right:1px solid #fff;*/
     margin:20px 0;
     width:130px;
@@ -474,7 +474,7 @@ blockquote {
 #slider {
     position:relative;
     background:url(images/loading.gif) no-repeat 50% 40%;
-    height:370px; 
+    height:370px;
 }
 
 #slider img {
@@ -486,7 +486,7 @@ blockquote {
 }
 
 
-/* PORTFOLIO PAGE 
+/* PORTFOLIO PAGE
 ---------------------------------------*/
 
 .portfolioCategs {
@@ -501,18 +501,18 @@ blockquote {
 }
 
 .portfolioCategs li a{
-    -moz-border-radius:4px; 
+    -moz-border-radius:4px;
     -webkit-border-radius:4px;
-    border-top:1px solid #ddd; 
-    border-left:1px solid #ddd; 
-    border-bottom:1px solid #fefefe; 
+    border-top:1px solid #ddd;
+    border-left:1px solid #ddd;
+    border-bottom:1px solid #fefefe;
     border-right:1px solid #fefefe;
-    padding:6px 12px;  
+    padding:6px 12px;
     text-shadow:1px 1px #fff;
     background:url(images/bk_blurb.jpg) 0 100% repeat-x;
     font-weight:bold;
     display:block;
-    
+
 }
 
 .gallery {
@@ -536,7 +536,7 @@ blockquote {
 }
 
 
-/* COLRIGHT ELEMENTS 
+/* COLRIGHT ELEMENTS
 -------------------------------------*/
 
 .rightBox  {
@@ -594,7 +594,7 @@ blockquote {
 }
 
 #content #colLeft ul.commentlist li .comment-meta, #content #colLeft ul.commentlist li .text  {
-    margin-left:20px;    
+    margin-left:20px;
 }
 
 #content #colLeft ul.commentlist li .comment-meta span {
@@ -703,7 +703,7 @@ line-height:140%;
     font-style:italic;
     line-height:125%;
     height:65px;
-    
+
 }
 
 #footerActionsInner #twitter #latest #tweetBottom{
@@ -838,12 +838,12 @@ line-height:140%;
 #quickContact form input[type="text"], #quickContact form textarea{
     width:138px;
     margin-bottom:5px;
-    -moz-border-radius:6px; 
+    -moz-border-radius:6px;
     -webkit-border-radius:6px;
     border-radius:6px;
-    border-top:1px solid #BDBDBD; 
-    border-left:1px solid #BDBDBD; 
-    border-bottom:1px solid #fff; 
+    border-top:1px solid #BDBDBD;
+    border-left:1px solid #BDBDBD;
+    border-bottom:1px solid #fff;
     border-right:1px solid #fff;
     background:url(images/bk_blurb.jpg) 0 100% repeat-x;
     padding:7px;
@@ -878,7 +878,7 @@ line-height:140%;
 /* Top Search */
 
 #topSearch input[type="text"] {
-    -moz-border-radius:4px; 
+    -moz-border-radius:4px;
     -webkit-border-radius:4px;
     border-radius:4xp;
     width:100px;
@@ -900,7 +900,7 @@ line-height:140%;
     background:url(images/but_search.png) 0 0 no-repeat;
     border:none;
     cursor:pointer;
-}    
+}
 
 
 /* Comments */
