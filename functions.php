@@ -352,7 +352,6 @@ function boldy_theme_page ()
             'logo_alt',
             'contact_email',
             'contact_text',
-            'cufon',
             'twitter_user',
             'latest_tweet',
             'facebook_link',
@@ -453,20 +452,6 @@ function boldy_settings()
             <th scope="row"><label for="logo_alt">Theme logo alternative text</label></th>
             <td>
                 <input name="logo_alt" type="text" id="logo_alt" value="<?php echo get_option('boldy_logo_alt'); ?>" class="regular-text" />
-            </td>
-        </tr>
-
-         <tr valign="top">
-            <th scope="row"><label for="cufon">Cufon font replacement</label></th>
-            <td>
-                <select name="cufon" id="cufon">
-                    <option value="yes" <?php if(get_option('boldy_cufon') == 'yes'){?>selected="selected"<?php }?>>Yes</option>
-                    <option value="no" <?php if(get_option('boldy_cufon') == 'no'){?>selected="selected"<?php }?>>No</option>
-                </select><br />
-                <p class="notice">
-                    Use <em>cufon-yui.js</em> to introduce a nice custom font in the theme.<br />
-                    Caution: cufon can be messy with accented characters.
-                </p>
             </td>
         </tr>
         <tr valign="top">
