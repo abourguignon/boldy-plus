@@ -282,6 +282,10 @@ body#portfolio #content {
     margin:5px 0 5px 15px;
 }
 
+.aligncenter {
+    margin: 0 auto;
+}
+
 
 /* Homeboxes */
 
@@ -463,6 +467,7 @@ blockquote {
     -moz-border-radius: 3px 3px 3px 3px;
     -webkit-border-radius: 3px 3px 3px 3px;
     border-radius: 3px 3px 3px 3px;
+    margin-bottom: 1.5em;
     padding-top: 4px;
     text-align: center;
 }
