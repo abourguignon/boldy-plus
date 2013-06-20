@@ -26,7 +26,7 @@
             }
 
             /* Widgetized sidebar */
-            if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?><?php endif;?>
+            if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar')): ?><?php endif; ?>
 
         </div>
         <!-- End #colRight -->
