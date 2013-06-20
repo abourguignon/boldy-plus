@@ -12,7 +12,6 @@
     <link href="<?php bloginfo('template_directory'); ?>/css/prettyphoto.css" rel="stylesheet" type="text/css">
     <link href="<?php bloginfo('template_directory'); ?>/css/nivo-slider.css" rel="stylesheet" type="text/css">
     <link href="<?php bloginfo('template_directory'); ?>/css/nivo-slider-custom.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery-1.10.1.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.form.js"></script>
