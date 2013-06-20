@@ -7,55 +7,33 @@
 
     <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
 
-    <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" type="text/css" media="all" />
-    <link href="<?php bloginfo('template_directory'); ?>/css/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
-    <link href="<?php bloginfo('template_directory'); ?>/css/prettyPhoto.css" rel="stylesheet" type="text/css" />
-    <link href="<?php bloginfo('template_directory'); ?>/css/nivo-slider.css" rel="stylesheet" type="text/css" />
+    <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" type="text/css" media="all">
+    <link href="<?php bloginfo('template_directory'); ?>/css/ddsmoothmenu.css" rel="stylesheet" type="text/css">
+    <link href="<?php bloginfo('template_directory'); ?>/css/prettyphoto.css" rel="stylesheet" type="text/css">
+    <link href="<?php bloginfo('template_directory'); ?>/css/nivo-slider.css" rel="stylesheet" type="text/css">
+    <link href="<?php bloginfo('template_directory'); ?>/css/nivo-slider-custom.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 
-    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery-1.10.1.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.form.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/ddsmoothmenu.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.nivo.slider.pack.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.ddsmoothmenu-2.0.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.nivo.slider-3.2.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.pretty.photo-3.1.5.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/custom.js"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('#quickContactForm').ajaxForm(function(data){
-                if (data==1)
-                {
-                    $('#success').fadeIn("slow");
-                    $('#bademail').fadeOut("slow");
-                    $('#badserver').fadeOut("slow");
-                    $('#contact').resetForm();
-                }
-                else if (data==2)
-                {
-                    $('#badserver').fadeIn("slow");
-                }
-                else if (data==3)
-                {
-                    $('#bademail').fadeIn("slow");
-                }
-            });
-        });
-    </script>
-
-    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+    <link href="<?php bloginfo('pingback_url'); ?>" rel="pingback">
     <?php wp_get_archives('type=monthly&format=link'); ?>
     <?php //comments_popup_script(); // off by default ?>
     <?php wp_head(); //plugins use this action hook to add their own scripts, stylesheets, and other functionality ?>
 </head>
 
-<body <?php if(is_home())
-            {
+<body <?php if(is_home()) {
                 echo 'id="home"';
             }
-            elseif(is_category(get_option('boldy_portfolio')) || post_is_in_descendant_category( get_option('boldy_portfolio')) && !is_single())
-            {
+            elseif(is_category(get_option('boldy_portfolio')) || post_is_in_descendant_category( get_option('boldy_portfolio')) && !is_single()) {
                 echo 'id="portfolio"';
-            }?>>
+            }
+?>>
 <!-- BEGINN MAINWRAPPER -->
 <div id="mainWrapper">
     <!-- BEGIN WRAPPER -->
@@ -80,6 +58,7 @@
             }
             ?>
             <!-- END MAIN MENU -->
+
             <!-- BEGIN TOP SEARCH -->
             <div id="topSearch">
                 <form id="searchform" action="<?php bloginfo('url'); ?>/" method="get">
@@ -88,6 +67,7 @@
                 </form>
             </div>
             <!-- END TOP SEARCH -->
+
             <!-- BEGIN TOP SOCIAL LINKS -->
             <div id="topSocial">
                 <ul>

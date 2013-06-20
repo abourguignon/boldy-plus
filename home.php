@@ -1,29 +1,30 @@
 <?php get_header(); ?>
 
 <!-- BEGIN SLIDER -->
-<div id="slider">
-    <?php
-    if (get_option('boldy_slider') != "") {
-        $page_data = get_page(get_option('boldy_slider'));
-        $content = $page_data->post_content;
-        echo $page_data->post_content;
-    }
-    else {
-    ?>
+<div class="slider-wrapper">
+    <div id="slider" class="nivoSlider">
+        <?php
+        if (get_option('boldy_slider') != "") {
+            $page_data = get_page(get_option('boldy_slider'));
+            echo $page_data->post_content;
+        }
+        else {
+        ?>
 
-    <div class="example-slice">
-        <p>
-            <?php _e("This is the slider. In order to have items here you need to
-            create a page in which to insert the images, simply one after
-            another, setting up the link to point at (if necessary) and
-            text captions in the Title field. Then select the page as the
-            \"slider page\" in the Theme Options Page. Make sure your images
-            are 960*370px.", "boldy-plus"); ?>
-        </p>
+        <div class="example-slice">
+            <p>
+                <?php _e("This is the slider. In order to have items here you need to
+                create a page in which to insert the images, simply one after
+                another, setting up the link to point at (if necessary) and
+                text captions in the Title field. Then select the page as the
+                \"slider page\" in the Theme Options Page. Make sure your images
+                are 960*370px.", "boldy-plus"); ?>
+            </p>
+        </div>
+        <?php
+        }
+        ?>
     </div>
-    <?php
-    }
-    ?>
 </div>
 <div style="width:960px; margin:0 auto; background:url(<?php bloginfo('template_directory'); ?>/images/bk_shadow_slider.png) 0 0 no-repeat; height:50px;"></div>
 <!-- END SLIDER -->
@@ -141,32 +142,5 @@ $box3=get_post(get_option('boldy_home_box3'));
 <?php endif; ?>
 <!-- end home boxes -->
 <!-- END HOME CONTENT -->
-
-<!-- SLIDER SETTINGS -->
-<script type="text/javascript">
-    $(window).load(function() {
-        $('#slider').nivoSlider({
-            effect:'fold', //Specify sets like: 'fold,fade,sliceDown'
-            slices:1, //Default: 15 (but kinda greedy with resources)
-            animSpeed:500,
-            pauseTime:3000,
-            startSlide:0, //Set starting Slide (0 index)
-            directionNav:true, //Next & Prev
-            directionNavHide:true, //Only show on hover
-            controlNav:true, //1,2,3...
-            controlNavThumbs:false, //Use thumbnails for Control Nav
-            controlNavThumbsFromRel:false, //Use image rel for thumbs
-            controlNavThumbsSearch: '.jpg', //Replace this with...
-            controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
-            keyboardNav:true, //Use left & right arrows
-            pauseOnHover:true, //Stop animation while hovering
-            manualAdvance:false, //Force manual transitions
-            captionOpacity:0.8, //Universal caption opacity
-            beforeChange: function(){},
-            afterChange: function(){},
-            slideshowEnd: function(){} //Triggers after all slides have been shown
-        });
-    });
-</script>
 
 <?php get_footer(); ?>

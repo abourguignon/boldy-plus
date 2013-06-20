@@ -345,7 +345,7 @@ function mytheme_comment($comment, $args, $depth) {
 add_action('admin_menu', 'boldy_theme_page');
 function boldy_theme_page ()
 {
-    if ( count($_POST) > 0 && isset($_POST['boldy_settings']) )
+    if (count($_POST) > 0 && isset($_POST['boldy_settings']))
     {
         $options = array (
             'logo_img',
@@ -381,8 +381,8 @@ function boldy_theme_page ()
 
         foreach ( $options as $opt )
         {
-            delete_option ( 'boldy_'.$opt, $_POST[$opt] );
-            add_option ( 'boldy_'.$opt, $_POST[$opt] );
+            delete_option('boldy_'.$opt, $_POST[$opt]);
+            add_option('boldy_'.$opt, $_POST[$opt]);
         }
 
     }

@@ -1,0 +1,71 @@
+/* Custom Boldy style */
+.slider-wrapper {
+    position:relative;
+}
+
+#slider {
+    background:url(images/loading.gif) no-repeat 50% 40%;
+    height:370px;
+}
+
+.nivo-directionNav,
+.nivo-directionNav a,
+.nivo-controlNav,
+.nivo-controlNav a {
+    z-index:99;
+}
+.nivo-prevNav {
+    left:15px;
+    width:47px;
+    height:47px;
+    display:block;
+    background:url(../images/slider/but_prev.png) 0 0 no-repeat;
+    text-indent:-9999px;
+}
+.nivo-nextNav {
+    right:15px;
+    width:47px;
+    height:47px;
+    display:block;
+    background:url(../images/slider/but_next.png) 0 0 no-repeat;
+    text-indent:-9999px;
+}
+.nivo-controlNav {
+    position:absolute;
+    top:0;
+    padding-top:25px;
+    text-align:center;
+    overflow:hidden;
+    margin-left:25px;
+}
+.nivo-controlNav a {
+    display:block;
+    float:left;
+    background:url(../images/slider/slider_controlnav.png) -20px 0 no-repeat;
+    text-indent:-9999px;
+    width:20px;
+    height:20px;
+    cursor:pointer;
+}
+.nivo-controlNav a.active {
+    font-weight:bold;
+    background:url(../images/slider/slider_controlnav.png) 0 0 no-repeat;
+}
+.nivo-caption p {
+    padding:20px 20px;
+    margin:0;
+    font-size:22px;
+    font-weight:bold;
+}
+
+#slider .example-slice {
+    height:100%;
+    border:1px solid #ddd;
+    background: #fff;
+}
+#slider .example-slice p {
+    width: 80%;
+    margin: 170px auto 0;
+    font-size:14px;
+    text-align: justify;
+}
