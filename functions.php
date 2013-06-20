@@ -375,7 +375,6 @@ function boldy_theme_page ()
             'footer_actions',
             'actions_hide',
             'portfolio',
-            'blog',
             'slider');
 
         foreach ( $options as $opt )
