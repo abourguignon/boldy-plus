@@ -39,14 +39,6 @@
     <div id="wrapper">
         <!-- BEGIN HEADER -->
         <div id="header">
-            <div id="logo">
-                <?php if (get_option('boldy_logo_img') != "") : ?>
-                <a href="<?php bloginfo('url'); ?>/"><img src="<?php echo get_option('boldy_logo_img'); ?>" alt="<?php echo get_option('boldy_logo_alt'); ?>" /></a>
-                <?php else : ?>
-                <a href="<?php bloginfo('url'); ?>/"><img src="<?php echo bloginfo('template_directory');?>/images/logo.png" alt="<?php echo get_option('boldy_logo_alt'); ?>" /></a>
-                <?php endif; ?>
-            </div>
-
             <!-- BEGIN MAIN MENU -->
             <?php
             if (function_exists('wp_nav_menu')) {
@@ -66,6 +58,14 @@
                 </form>
             </div>
             <!-- END TOP SEARCH -->
+
+            <div id="logo">
+                <?php if (get_option('boldy_logo_img') != "") : ?>
+                <a href="<?php bloginfo('url'); ?>/"><img src="<?php echo get_option('boldy_logo_img'); ?>" alt="<?php echo get_option('boldy_logo_alt'); ?>" /></a>
+                <?php else : ?>
+                <a href="<?php bloginfo('url'); ?>/"><img src="<?php echo bloginfo('template_directory');?>/images/logo.png" alt="<?php echo get_option('boldy_logo_alt'); ?>" /></a>
+                <?php endif; ?>
+            </div>
 
             <!-- BEGIN TOP SOCIAL LINKS -->
             <div id="topSocial">
