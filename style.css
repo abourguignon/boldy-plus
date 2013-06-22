@@ -391,6 +391,7 @@ body#portfolio #content {
     text-shadow:1px 1px #fff;
     margin-top:-12px;
     margin-bottom:18px;
+    text-align: justify;
 }
 
 .postTags {
@@ -869,10 +870,11 @@ line-height:140%;
     padding-top:5px;
 }
 
-#quickContact form input[type="submit"] {
+#quickContact form input[type="submit"],
+#searchform input[type="submit"] {
     display:block;
     float:right;
-    width:81px;
+    width:79px;
     height:24px;
     background:url(images/but_actions.png) 0 0 no-repeat;
     text-align:center;
@@ -881,7 +883,6 @@ line-height:140%;
     padding-top:0px;
     border:none;
     line-height:80%;
-    margin-top:3px;
 
 }
 
@@ -911,6 +912,20 @@ line-height:140%;
     background:url(images/but_search.png) 0 0 no-repeat;
     border:none;
     cursor:pointer;
+}
+
+
+/* Search form (in the sidebar) */
+.rightBox #searchform .screen-reader-text {
+    display: none;
+}
+
+.rightBox #searchform #s {
+    height:24px;
+    width: 145px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background: #fff;
 }
 
 
